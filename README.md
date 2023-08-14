@@ -41,8 +41,7 @@ Some stats may be stale (miniscule amount tbh), as MWQ's mean stats change very 
 ---
 
 ## Legality
-I believe that this script falls within the rules of the "
-Script Rules for HTML site", as this script makes zero restricted actions and just scrapes information at the max.
+The script should be legal, it makes api calls with a user-agent client-side.
 
 --- 
 
