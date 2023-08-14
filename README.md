@@ -4,9 +4,8 @@ My TamperMonkey script that gets issue stats and puts them on your issues page.
 
 ## Usage
 [Add the script](https://github.com/Kractero/issue-stats/raw/main/issueStatGetter.user.js) to Tampermonkey.
-In the getBadgeMap function at line 39, add your identification means in lieu of the curly braces.
 
-If you want to build your own issues_list.json, make sure you have Python on your system.
+If you want to build your own issues_list.json, make sure you have Python on your system (I manually fixed a ton so this might not be identical)
 
 ```
 git clone https://github.com/Kractero/issue-stats.git
@@ -20,9 +19,11 @@ python generate_json.py
 
 Please file an issue if you run into any bugs, because there will be bugs.
 
-I am working on mitigating issues and manually fixing, but one that will be difficult to fix will be missing text/results. This is because I am relying on multiple parties to have their data correct, these being MWQ and the Valentine Z megathread. With being MWQ being updated very often, I believe almost all the issues come from the megathread being out of date, but since choices are the only thing the script is able to get from NationStates, nothing can really be done about it unless I make a PR. I manually corrected to the best of my ability but until the megathread is updated, there may be some issues.
+A select few issues may be wrong, this is because I am relying on multiple parties to have their data correct, these being MWQ and the Valentine Z megathread. I manually fixed most of the problematic ones.
 
-This means that some stats may be stale, as MWQ's mean stats change very often (but not enough to really matter).
+The recent changes to issues for athieism vs religiousness resulted in many changes to issues but I ignored most of them, as the choice variation still results in the same stat changes.
+
+Some stats may be stale (miniscule amount tbh), as MWQ's mean stats change very often and this is essentially a snapshot of MWQ.
 
 ---
 
