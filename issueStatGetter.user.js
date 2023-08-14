@@ -139,7 +139,7 @@ function levenshteinDistance(str1, str2) {
   async function getBadgeMap(nation) {
     const ranks = await fetch(`https://www.nationstates.net/cgi-bin/api.cgi?nation=${nation}&q=census;scale=all;mode=prank`, {
       headers: {
-        'User-Agent': `${nation}`
+        'User-Agent': `${nation}, using issue-stats by nationstates nation Kractero`
       }
     });
     const ranksAsText = await ranks.text();
