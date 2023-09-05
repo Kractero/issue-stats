@@ -139,7 +139,7 @@ function levenshteinDistance(str1, str2) {
   async function getBadgeMap(nation) {
     const ranks = await fetch(`https://www.nationstates.net/cgi-bin/api.cgi?nation=${nation}&q=census;scale=all;mode=prank`, {
       headers: {
-        'User-Agent': `${nation}, using issue-stats by nationstates nation Kractero`
+        'User-Agent': `${nation}`
       }
     });
     const ranksAsText = await ranks.text();
@@ -209,7 +209,12 @@ function levenshteinDistance(str1, str2) {
   document.getElementsByTagName("head")[0].appendChild(stylesheet);
 
   const id = window.location.href.replace('https://www.nationstates.net/page=show_dilemma/dilemma=', '');
-  const nation = document.querySelector('.bannernation2').innerText;
+  let nation = "";
+  if (nation) {
+    nation = document.querySelector('.bannernation2').innerText;
+  } else {
+    nation = document.querySelector('#loggedin').getAttribute('data-nname')
+  }
   const choices = document.querySelectorAll('.diloptions li p:first-child');
   const filterSpot = document.querySelector('.dilemma');
 
@@ -234,7 +239,7 @@ function levenshteinDistance(str1, str2) {
       element.classList.toggle('hidden');
     });
   });
-  
+
   gatherBadges.addEventListener('click', () => {
     let badges = JSON.parse(localStorage.getItem('badges') || '{}');
     delete badges[nation];
