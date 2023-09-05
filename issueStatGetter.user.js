@@ -361,16 +361,22 @@ function levenshteinDistance(str1, str2) {
     figureOutCheckStatus();
   }
 
+  let notabilities_and_possibilities = [];
   let json = bestMatchArray.map((option) => {
     if (issue.options[String(option.idx + 1)].results) {
       let split = issue.options[String(option.idx + 1)].results.split('\n');
-      return split.map((effect) => {
+      let notabilities_and_possibilities_subarr = [];
+      const effectArr = split.map((effect) => {
         const effectContent = getEffectContent(effect);
         const censusEntry = Object.keys(badges[nation]).find(item => item === effectContent);
         if (censusEntry) {
           return [effectContent, badges[nation][effectContent], effect];
+        } else {
+          notabilities_and_possibilities_subarr.push(effect);
         }
       }).filter(item => item);
+      notabilities_and_possibilities.push(notabilities_and_possibilities_subarr);
+      return effectArr;
     }
   }).filter(json => json).map(subArray => {
     if (subArray) {
@@ -388,7 +394,17 @@ function levenshteinDistance(str1, str2) {
 
   approves.forEach((option, index) => {
     const fatherDiv = document.createElement('div');
+    const policyDiv = document.createElement('div');
     fatherDiv.classList.add('effect-div');
+
+    if (notabilities_and_possibilities[index]) {
+      notabilities_and_possibilities[index].map(policies => {
+        const policy = document.createElement('p');
+        policy.textContent = policies;
+        policyDiv.append(policy);
+      });
+    }
+
     const goodDiv = document.createElement('div');
     const badDiv = document.createElement('div');
 
@@ -425,6 +441,7 @@ function levenshteinDistance(str1, str2) {
       badDiv.appendChild(probableBug);
     }
     fatherDiv.append(goodDiv, badDiv);
+    option.appendChild(policyDiv);
     option.appendChild(fatherDiv);
   });
 
