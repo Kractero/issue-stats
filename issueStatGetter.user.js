@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Issue Stat Getter
 // @namespace    Kra
-// @version      1.0
+// @version      1.1
 // @description  Get issues results shown to you.
 // @author       Kractero
 // @match        https://www.nationstates.net/page=show_dilemma/dilemma=*
