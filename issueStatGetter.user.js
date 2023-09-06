@@ -52,7 +52,7 @@ function levenshteinDistance(str1, str2) {
     "1200-1299",
     "1300-1399",
     "1400-1499",
-    "1500-1578"
+    "1500-1586"
   ];
   const census = [
     ['0', 'Civil Rights', 'liberal'],
