@@ -5,8 +5,8 @@
 // @description  Get issues results shown to you.
 // @author       Kractero
 // @match        https://www.nationstates.net/page=show_dilemma/dilemma=*
-// @downloadURL  https://github.com/Kractero/issue-stats/raw/master/issueStatGetter.js
-// @updateURL    https://github.com/Kractero/issue-stats/raw/master/issueStatGetter.js
+// @downloadURL  https://raw.githubusercontent.com/Kractero/issue-stats/main/issueStatGetter.user.js
+// @updateURL    https://raw.githubusercontent.com/Kractero/issue-stats/main/issueStatGetter.user.js
 // @grant        none
 // ==/UserScript==
 
