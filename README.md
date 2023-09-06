@@ -16,14 +16,23 @@ python generate_json.py
 ---
 
 ## Known Issues
-
-Please file an issue if you run into any bugs, because there will be bugs.
-
-A select few issues may be wrong, this is because I am relying on multiple parties to have their data correct, these being MWQ and the Valentine Z megathread. I manually fixed most of the problematic ones.
+A select few issues may be wrong, this is because I am relying on multiple sources of truth to have their data correct, these being MWQ and the Valentine Z megathread. I manually fixed most of the problematic ones.
 
 The recent changes to issues for athieism vs religiousness resulted in many changes to issues but I ignored most of them, as the choice variation still results in the same stat changes.
 
-Some stats may be stale (miniscule amount tbh), as MWQ's mean stats change very often and this is essentially a snapshot of MWQ.
+Some stats may be stale (miniscule amount tbh), as MWQ's mean stats change very often when new data points are entered and this is essentially a snapshot of MWQ.
+
+### Deliberate Issue Omissions: 
+Below list contains issues or choices that are ommited from stats because their sample size from mwq is too low. This is new, so some of the previous entries may be drawn from low sample results. When they hit enough I will revisit and add them. 
+1. 1577 (All About The Hustle)
+2. 1580 (Profitable for Doctrine)
+3. 1582 (Hospital Problems Ramping Up)
+4. 1583 (Spare the (Plutonium) Rod)
+5. 1585 (The Taste of Revenge)
+6. 1586 (Don't Point That Thing At Me)
+7. 1336 new option for nations that need licenses for parenting (Take Good Care of My Baby)
+
+Please file an issue if you run into any bugs, because there will be bugs.
 
 ---
 
