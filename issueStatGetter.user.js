@@ -209,8 +209,7 @@ function levenshteinDistance(str1, str2) {
   document.getElementsByTagName("head")[0].appendChild(stylesheet);
 
   const id = window.location.href.replace('https://www.nationstates.net/page=show_dilemma/dilemma=', '');
-  let nation = "";
-  if (nation) {
+  if (document.querySelector('.bannernation2')) {
     nation = document.querySelector('.bannernation2').innerText;
   } else {
     nation = document.querySelector('#loggedin').getAttribute('data-nname')
