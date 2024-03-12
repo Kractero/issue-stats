@@ -33,7 +33,7 @@ function levenshteinDistance(str1, str2) {
 }
 
 
-(async function() {
+(async function () {
   'use strict';
 
   const jsonRanges = [
@@ -137,7 +137,7 @@ function levenshteinDistance(str1, str2) {
     ['88', 'Food Quality', 'foodquality']
   ];
   async function getBadgeMap(nation) {
-    const ranks = await fetch(`https://www.nationstates.net/cgi-bin/api.cgi?nation=${nation}&q=census;scale=all;mode=prank`, {
+    const ranks = await fetch(`https://www.nationstates.net/cgi-bin/api.cgi?nation=${nation}&q=census;scale=all;mode=prank&userAgent=${nation} using Issue Stat Getter by Kractero`, {
       headers: {
         'User-Agent': `${nation}`
       }
