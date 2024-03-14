@@ -1,0 +1,2392 @@
+{
+  "title": "Terrorists Strike City Centre",
+  "number": "222",
+  "options": [
+    {
+      "text": "\"They simply crossed the line!\" shouts General @@RANDOM_NAME@@. \"Far too long have we tolerated these terrorist threats, it's time that they realise they can't mess with us. Send the order to prepare an invasion, and we will show them who is boss! Our brave soldiers are prepared to die for their country, all we need is your signature and a lot of money. But what is the cost of freedom and safety for @@NAME@@'s peoples?\"",
+      "result": "the armed forces are locked in an expensive and bloody war abroad to stamp out possible terrorists",
+      "choiceEffects": [
+        {
+          "min": -0.18,
+          "max": 0,
+          "mean": -0.0001,
+          "stat": "Civil Rights"
+        },
+        {
+          "min": 0,
+          "max": 10.5,
+          "mean": 0.005,
+          "stat": "Economy"
+        },
+        {
+          "min": 0,
+          "max": 3.68,
+          "mean": 0.0018,
+          "stat": "Wealth Gaps"
+        },
+        {
+          "min": 0,
+          "max": 12.2,
+          "mean": 0.4998,
+          "stat": "Death Rate"
+        },
+        {
+          "min": -1.01,
+          "max": 0,
+          "mean": -0.0005,
+          "stat": "Compassion"
+        },
+        {
+          "min": -120.32,
+          "max": 189.1,
+          "mean": -7.7269,
+          "stat": "Eco-Friendliness"
+        },
+        {
+          "min": 0,
+          "max": 0.18,
+          "mean": 0.0001,
+          "stat": "Social Conservatism"
+        },
+        {
+          "min": 0,
+          "max": 0.25,
+          "mean": 0.0001,
+          "stat": "Nudity"
+        },
+        {
+          "min": -139,
+          "max": 4.05,
+          "mean": -14.0616,
+          "stat": "Industry: Automobile Manufacturing"
+        },
+        {
+          "min": -133.03,
+          "max": 1.81,
+          "mean": -13.5045,
+          "stat": "Industry: Cheese Exports"
+        },
+        {
+          "min": -189.29,
+          "max": 158.15,
+          "mean": -19.4558,
+          "stat": "Industry: Basket Weaving"
+        },
+        {
+          "min": -226.75,
+          "max": 55.01,
+          "mean": -37.6278,
+          "stat": "Industry: Information Technology"
+        },
+        {
+          "min": -451.29,
+          "max": 136.86,
+          "mean": -19.5326,
+          "stat": "Industry: Pizza Delivery"
+        },
+        {
+          "min": -283.55,
+          "max": 702.06,
+          "mean": -21.6501,
+          "stat": "Industry: Trout Fishing"
+        },
+        {
+          "min": 0,
+          "max": 2146.84,
+          "mean": 766.8665,
+          "stat": "Industry: Arms Manufacturing"
+        },
+        {
+          "min": -143.76,
+          "max": 77.36,
+          "mean": -16.7673,
+          "stat": "Sector: Agriculture"
+        },
+        {
+          "min": -105.8,
+          "max": 148.04,
+          "mean": 19.6028,
+          "stat": "Industry: Beverage Sales"
+        },
+        {
+          "min": -147.63,
+          "max": 137.53,
+          "mean": -18.0133,
+          "stat": "Industry: Timber Woodchipping"
+        },
+        {
+          "min": -292.16,
+          "max": 25.78,
+          "mean": -25.6914,
+          "stat": "Industry: Mining"
+        },
+        {
+          "min": -139.6,
+          "max": 8.51,
+          "mean": -13.8787,
+          "stat": "Industry: Insurance"
+        },
+        {
+          "min": -146.2,
+          "max": 4.91,
+          "mean": -15.5606,
+          "stat": "Industry: Furniture Restoration"
+        },
+        {
+          "min": -261.7,
+          "max": 323.18,
+          "mean": -23.7776,
+          "stat": "Industry: Retail"
+        },
+        {
+          "min": -203.88,
+          "max": 5.12,
+          "mean": -20.2632,
+          "stat": "Industry: Book Publishing"
+        },
+        {
+          "min": -225.95,
+          "max": 16.52,
+          "mean": -13.634,
+          "stat": "Industry: Gambling"
+        },
+        {
+          "min": -67.35,
+          "max": 2009.15,
+          "mean": 733.0215,
+          "stat": "Sector: Manufacturing"
+        },
+        {
+          "min": 0,
+          "max": 1,
+          "mean": 0.1233,
+          "stat": "Government Size"
+        },
+        {
+          "min": -76.33,
+          "max": 206.29,
+          "mean": -10.6137,
+          "stat": "Welfare"
+        },
+        {
+          "min": -121.67,
+          "max": 300.83,
+          "mean": -14.8958,
+          "stat": "Public Healthcare"
+        },
+        {
+          "min": -271.13,
+          "max": 657.01,
+          "mean": -23.2253,
+          "stat": "Law Enforcement"
+        },
+        {
+          "min": -162.62,
+          "max": 266.46,
+          "mean": -15.2725,
+          "stat": "Business Subsidization"
+        },
+        {
+          "min": -61.68,
+          "max": 0,
+          "mean": -0.0296,
+          "stat": "Income Equality"
+        },
+        {
+          "min": -0.14,
+          "max": 0,
+          "mean": -0.0001,
+          "stat": "Niceness"
+        },
+        {
+          "min": 0,
+          "max": 1.6,
+          "mean": 0.0008,
+          "stat": "Rudeness"
+        },
+        {
+          "min": 0,
+          "max": 0.03,
+          "mean": 0,
+          "stat": "Ignorance"
+        },
+        {
+          "min": -1.06,
+          "max": 0,
+          "mean": -0.191,
+          "stat": "Health"
+        },
+        {
+          "min": -0.97,
+          "max": 0,
+          "mean": -0.0005,
+          "stat": "Cheerfulness"
+        },
+        {
+          "min": -7,
+          "max": 0,
+          "mean": -1.0014,
+          "stat": "Weather"
+        },
+        {
+          "min": -3.31,
+          "max": 0,
+          "mean": -0.0016,
+          "stat": "Compliance"
+        },
+        {
+          "min": -0.62,
+          "max": 0,
+          "mean": -0.0003,
+          "stat": "Safety"
+        },
+        {
+          "min": -5.5,
+          "max": 0,
+          "mean": -0.2822,
+          "stat": "Lifespan"
+        },
+        {
+          "min": -2.56,
+          "max": 0,
+          "mean": -0.0012,
+          "stat": "Ideological Radicality"
+        },
+        {
+          "min": 0,
+          "max": 832.68,
+          "mean": 256.2638,
+          "stat": "Defense Forces"
+        },
+        {
+          "min": -10.87,
+          "max": 0,
+          "mean": -2.9629,
+          "stat": "Pacifism"
+        },
+        {
+          "min": 0,
+          "max": 7.87,
+          "mean": 0.0038,
+          "stat": "Economic Freedom"
+        },
+        {
+          "min": -2.57,
+          "max": 0.94,
+          "mean": 0.1211,
+          "stat": "Taxation"
+        },
+        {
+          "min": -1.64,
+          "max": 6.35,
+          "mean": -0.7283,
+          "stat": "Freedom From Taxation"
+        },
+        {
+          "min": 0,
+          "max": 2.5,
+          "mean": 0.0012,
+          "stat": "Corruption"
+        },
+        {
+          "min": -0.16,
+          "max": 0,
+          "mean": -0.0001,
+          "stat": "Integrity"
+        },
+        {
+          "min": -1460.26,
+          "max": 0,
+          "mean": -0.7004,
+          "stat": "Authoritarianism"
+        },
+        {
+          "min": -0.73,
+          "max": 0.78,
+          "mean": 0.0239,
+          "stat": "Employment"
+        },
+        {
+          "min": -77.49,
+          "max": 206.29,
+          "mean": -8.0183,
+          "stat": "Public Transport"
+        },
+        {
+          "min": -135.32,
+          "max": 0,
+          "mean": -0.0656,
+          "stat": "Tourism"
+        },
+        {
+          "min": 0,
+          "max": 0.16,
+          "mean": 0.0209,
+          "stat": "Weaponization"
+        },
+        {
+          "min": -0.84,
+          "max": 0,
+          "mean": -0.1821,
+          "stat": "Recreational Drug Use"
+        },
+        {
+          "min": 0,
+          "max": 0.41,
+          "mean": 0.1307,
+          "stat": "Obesity"
+        },
+        {
+          "min": 0,
+          "max": 0.41,
+          "mean": 0.0002,
+          "stat": "Charmlessness"
+        },
+        {
+          "min": 0,
+          "max": 2.56,
+          "mean": 0.0012,
+          "stat": "Averageness"
+        },
+        {
+          "min": -1.83,
+          "max": 1.28,
+          "mean": -0.0932,
+          "stat": "Human Development Index"
+        },
+        {
+          "min": -46.83,
+          "max": 7249.61,
+          "mean": 578.8543,
+          "stat": "Average Income"
+        },
+        {
+          "min": -16829.86,
+          "max": 1168.45,
+          "mean": 280.0193,
+          "stat": "Average Income of Poor"
+        },
+        {
+          "min": -60,
+          "max": 56027,
+          "mean": 1319.8029,
+          "stat": "Average Income of Rich"
+        },
+        {
+          "min": -145.34,
+          "max": 232.07,
+          "mean": -19.9356,
+          "stat": "Public Education"
+        },
+        {
+          "min": 0,
+          "max": 0.12,
+          "mean": 0.0001,
+          "stat": "Crime"
+        },
+        {
+          "min": -34.57,
+          "max": 0.52,
+          "mean": -2.7343,
+          "stat": "Foreign Aid"
+        },
+        {
+          "min": -915.67,
+          "max": 2521.45,
+          "mean": 212.5859,
+          "stat": "Average Disposable Income"
+        },
+        {
+          "min": 0,
+          "max": 1.22,
+          "mean": 0.2722,
+          "stat": "Patriotism"
+        },
+        {
+          "min": -1.01,
+          "max": 0.05,
+          "mean": -0.2396,
+          "stat": "Food Quality"
+        }
+      ],
+      "policiesAndNotabilities": [
+        {
+          "full": "sometimes adds notability: deadly medical pandemics",
+          "qualifier": "sometimes",
+          "behavior": "adds",
+          "type": "notability",
+          "name": "deadly medical pandemics"
+        },
+        {
+          "full": "may add or remove notability: punitive income tax rates",
+          "qualifier": "definitive",
+          "behavior": "adds",
+          "type": "notability",
+          "name": "punitive income tax rates"
+        },
+        {
+          "full": "sometimes adds notability: restrictive gun laws",
+          "qualifier": "sometimes",
+          "behavior": "adds",
+          "type": "notability",
+          "name": "restrictive gun laws"
+        }
+      ],
+      "leadsTo": []
+    },
+    {
+      "text": "\"Attacking another country isn't the answer,\" says @@RANDOM_NAME@@, director of the @@DEMONYM_ADJECTIVE@@ Intelligence Agency. \"The problem doesn't lie abroad, but within @@NAME@@ itself! We should have more freedom to do our work. Protecting our nation from these cowardly scaremongerers would be much easier if we had an inherent right to tap phones and other communications, get search warrants whenever we need, and detain suspects indefinitely. Remember, to prevent is better than to cure.\"",
+      "result": "everyone suspects that everyone else is a terrorist\n\nused to be \"prisons are crowded with possible terrorist suspects\"",
+      "choiceEffects": [
+        {
+          "min": -14.5,
+          "max": 0,
+          "mean": -2.341,
+          "stat": "Civil Rights"
+        },
+        {
+          "min": -4,
+          "max": 0,
+          "mean": -0.7693,
+          "stat": "Political Freedom"
+        },
+        {
+          "min": -10.3,
+          "max": 0,
+          "mean": -0.3528,
+          "stat": "Death Rate"
+        },
+        {
+          "min": -86.67,
+          "max": 16.14,
+          "mean": -2.3936,
+          "stat": "Eco-Friendliness"
+        },
+        {
+          "min": 0,
+          "max": 15.75,
+          "mean": 2.2447,
+          "stat": "Social Conservatism"
+        },
+        {
+          "min": -33.75,
+          "max": 0,
+          "mean": -2.6192,
+          "stat": "Nudity"
+        },
+        {
+          "min": -32.61,
+          "max": 42.36,
+          "mean": -1.6723,
+          "stat": "Industry: Automobile Manufacturing"
+        },
+        {
+          "min": -41.76,
+          "max": 19.7,
+          "mean": -1.9858,
+          "stat": "Industry: Cheese Exports"
+        },
+        {
+          "min": -36.47,
+          "max": 61.74,
+          "mean": -3.0186,
+          "stat": "Industry: Basket Weaving"
+        },
+        {
+          "min": -143.09,
+          "max": 123.15,
+          "mean": -6.7293,
+          "stat": "Industry: Information Technology"
+        },
+        {
+          "min": -49.43,
+          "max": 28.37,
+          "mean": -1.759,
+          "stat": "Industry: Pizza Delivery"
+        },
+        {
+          "min": -107.34,
+          "max": 36.53,
+          "mean": -5.0476,
+          "stat": "Industry: Trout Fishing"
+        },
+        {
+          "min": -176.95,
+          "max": 180.04,
+          "mean": -7.1949,
+          "stat": "Industry: Arms Manufacturing"
+        },
+        {
+          "min": -33.97,
+          "max": 31.45,
+          "mean": -2.8787,
+          "stat": "Sector: Agriculture"
+        },
+        {
+          "min": -28.92,
+          "max": 57.67,
+          "mean": -1.0314,
+          "stat": "Industry: Beverage Sales"
+        },
+        {
+          "min": -33.41,
+          "max": 70.26,
+          "mean": -2.53,
+          "stat": "Industry: Timber Woodchipping"
+        },
+        {
+          "min": -41.54,
+          "max": 106.95,
+          "mean": -3.3588,
+          "stat": "Industry: Mining"
+        },
+        {
+          "min": -30.54,
+          "max": 41.69,
+          "mean": -1.6341,
+          "stat": "Industry: Insurance"
+        },
+        {
+          "min": -38.59,
+          "max": 37.49,
+          "mean": -2.2261,
+          "stat": "Industry: Furniture Restoration"
+        },
+        {
+          "min": -56.99,
+          "max": 122.42,
+          "mean": -3.8769,
+          "stat": "Industry: Retail"
+        },
+        {
+          "min": -43.44,
+          "max": 26.94,
+          "mean": -3.1948,
+          "stat": "Industry: Book Publishing"
+        },
+        {
+          "min": -1106.66,
+          "max": 249.63,
+          "mean": -73.5176,
+          "stat": "Industry: Gambling"
+        },
+        {
+          "min": -179.52,
+          "max": 193.89,
+          "mean": -11.8857,
+          "stat": "Sector: Manufacturing"
+        },
+        {
+          "min": 0,
+          "max": 0.33,
+          "mean": 0.092,
+          "stat": "Government Size"
+        },
+        {
+          "min": -23.89,
+          "max": 20.97,
+          "mean": -2.5035,
+          "stat": "Welfare"
+        },
+        {
+          "min": -48.42,
+          "max": 25.47,
+          "mean": -3.8512,
+          "stat": "Public Healthcare"
+        },
+        {
+          "min": 0,
+          "max": 534.01,
+          "mean": 222.1291,
+          "stat": "Law Enforcement"
+        },
+        {
+          "min": -37.96,
+          "max": 46.96,
+          "mean": -3.689,
+          "stat": "Business Subsidization"
+        },
+        {
+          "min": -4.5,
+          "max": 0.03,
+          "mean": -0.516,
+          "stat": "Rudeness"
+        },
+        {
+          "min": -3.94,
+          "max": 0,
+          "mean": -0.5083,
+          "stat": "Intelligence"
+        },
+        {
+          "min": 0,
+          "max": 6.7,
+          "mean": 0.5726,
+          "stat": "Ignorance"
+        },
+        {
+          "min": 0,
+          "max": 5.25,
+          "mean": 1.1952,
+          "stat": "Compliance"
+        },
+        {
+          "min": -1.13,
+          "max": 11.98,
+          "mean": 1.4803,
+          "stat": "Safety"
+        },
+        {
+          "min": 0,
+          "max": 2.1,
+          "mean": 0.164,
+          "stat": "Lifespan"
+        },
+        {
+          "min": -6.25,
+          "max": 3.03,
+          "mean": 0.0927,
+          "stat": "Ideological Radicality"
+        },
+        {
+          "min": -110.76,
+          "max": 60.77,
+          "mean": -5.2328,
+          "stat": "Defense Forces"
+        },
+        {
+          "min": 0,
+          "max": 15.92,
+          "mean": 2.0677,
+          "stat": "Pacifism"
+        },
+        {
+          "min": -0.02,
+          "max": 1.31,
+          "mean": 0.3402,
+          "stat": "Taxation"
+        },
+        {
+          "min": -1.44,
+          "max": 0.12,
+          "mean": -1.0317,
+          "stat": "Freedom From Taxation"
+        },
+        {
+          "min": 0,
+          "max": 4.61,
+          "mean": 1.7701,
+          "stat": "Corruption"
+        },
+        {
+          "min": -1.91,
+          "max": 0,
+          "mean": -0.4377,
+          "stat": "Integrity"
+        },
+        {
+          "min": 0,
+          "max": 902.07,
+          "mean": 85.9269,
+          "stat": "Authoritarianism"
+        },
+        {
+          "min": -4.16,
+          "max": 0.19,
+          "mean": -0.2993,
+          "stat": "Employment"
+        },
+        {
+          "min": -16.42,
+          "max": 13.48,
+          "mean": -2.0411,
+          "stat": "Public Transport"
+        },
+        {
+          "min": 0,
+          "max": 126.42,
+          "mean": 34.508,
+          "stat": "Tourism"
+        },
+        {
+          "min": -1.75,
+          "max": 0,
+          "mean": -0.0621,
+          "stat": "Weaponization"
+        },
+        {
+          "min": -90.28,
+          "max": 0,
+          "mean": -3.4461,
+          "stat": "Recreational Drug Use"
+        },
+        {
+          "min": -46.81,
+          "max": 0,
+          "mean": -2.5199,
+          "stat": "Charmlessness"
+        },
+        {
+          "min": -3.03,
+          "max": 6.25,
+          "mean": -0.0927,
+          "stat": "Averageness"
+        },
+        {
+          "min": 0,
+          "max": 0.7,
+          "mean": 0.0547,
+          "stat": "Human Development Index"
+        },
+        {
+          "min": -465.41,
+          "max": 949.65,
+          "mean": 57.755,
+          "stat": "Average Income"
+        },
+        {
+          "min": -400.84,
+          "max": 583.23,
+          "mean": 31.0609,
+          "stat": "Average Income of Poor"
+        },
+        {
+          "min": -2083,
+          "max": 4530,
+          "mean": 122.7377,
+          "stat": "Average Income of Rich"
+        },
+        {
+          "min": -39.92,
+          "max": 35.22,
+          "mean": -4.9312,
+          "stat": "Public Education"
+        },
+        {
+          "min": -3.88,
+          "max": 0,
+          "mean": -0.5534,
+          "stat": "Crime"
+        },
+        {
+          "min": -11.6,
+          "max": 5.69,
+          "mean": -0.7637,
+          "stat": "Foreign Aid"
+        },
+        {
+          "min": -2289.44,
+          "max": 192.76,
+          "mean": -221.873,
+          "stat": "Average Disposable Income"
+        },
+        {
+          "min": 0,
+          "max": 0.9,
+          "mean": 0.0598,
+          "stat": "Patriotism"
+        }
+      ],
+      "policiesAndNotabilities": [
+        {
+          "full": "sometimes removes notability: absence of drug laws",
+          "qualifier": "sometimes",
+          "behavior": "removes",
+          "type": "notability",
+          "name": "absence of drug laws"
+        },
+        {
+          "full": "sometimes adds notability: punitive income tax rates",
+          "qualifier": "sometimes",
+          "behavior": "adds",
+          "type": "notability",
+          "name": "punitive income tax rates"
+        },
+        {
+          "full": "sometimes adds notability: restrictive gun laws",
+          "qualifier": "sometimes",
+          "behavior": "adds",
+          "type": "notability",
+          "name": "restrictive gun laws"
+        }
+      ],
+      "leadsTo": []
+    },
+    {
+      "text": "\"No, that's what those terrorists want us to do!\" speculates chairman @@RANDOM_NAME@@ of the Patriots' Tea and Biscuits Club. \"We don't want to give the Agency any more responsibility, they're the ones who messed up in the first place. What we need is to purge @@NAME@@ of these rats who don't respect the laws and traditions of our way of life. We know who they are and where they come from, so the solution is obvious: we just won't let those sorts of people cross our borders and kick out those who are already here. It might seem a bit harsh, but hey, we were here first. Long live @@NAME@@!\"",
+      "result": "customs turn away those considered to have an unfavourable ethnicity",
+      "choiceEffects": [
+        {
+          "min": -10.83,
+          "max": 0,
+          "mean": -1.4876,
+          "stat": "Civil Rights"
+        },
+        {
+          "min": -9.95,
+          "max": 0,
+          "mean": -0.3782,
+          "stat": "Death Rate"
+        },
+        {
+          "min": -2.28,
+          "max": 0,
+          "mean": -1.1139,
+          "stat": "Compassion"
+        },
+        {
+          "min": -18.24,
+          "max": 8.56,
+          "mean": -2.0595,
+          "stat": "Eco-Friendliness"
+        },
+        {
+          "min": 0,
+          "max": 13.08,
+          "mean": 1.4188,
+          "stat": "Social Conservatism"
+        },
+        {
+          "min": -29.25,
+          "max": 0,
+          "mean": -1.6889,
+          "stat": "Nudity"
+        },
+        {
+          "min": -30.45,
+          "max": 14.09,
+          "mean": -1.7182,
+          "stat": "Industry: Automobile Manufacturing"
+        },
+        {
+          "min": -23.39,
+          "max": 17.05,
+          "mean": -1.9716,
+          "stat": "Industry: Cheese Exports"
+        },
+        {
+          "min": -43.14,
+          "max": 13.07,
+          "mean": -3.8526,
+          "stat": "Industry: Basket Weaving"
+        },
+        {
+          "min": -104.63,
+          "max": 17.75,
+          "mean": -6.0884,
+          "stat": "Industry: Information Technology"
+        },
+        {
+          "min": -29.05,
+          "max": 13.44,
+          "mean": -1.6125,
+          "stat": "Industry: Pizza Delivery"
+        },
+        {
+          "min": -49.02,
+          "max": 28.5,
+          "mean": -3.5359,
+          "stat": "Industry: Trout Fishing"
+        },
+        {
+          "min": -130.34,
+          "max": 276.51,
+          "mean": 64.2239,
+          "stat": "Industry: Arms Manufacturing"
+        },
+        {
+          "min": -40.12,
+          "max": 12.23,
+          "mean": -3.2225,
+          "stat": "Sector: Agriculture"
+        },
+        {
+          "min": -20.27,
+          "max": 17.26,
+          "mean": -1.3904,
+          "stat": "Industry: Beverage Sales"
+        },
+        {
+          "min": -30.38,
+          "max": 19.71,
+          "mean": -2.721,
+          "stat": "Industry: Timber Woodchipping"
+        },
+        {
+          "min": -41.73,
+          "max": 35.78,
+          "mean": -4.2059,
+          "stat": "Industry: Mining"
+        },
+        {
+          "min": -19.68,
+          "max": 10.37,
+          "mean": -1.5062,
+          "stat": "Industry: Insurance"
+        },
+        {
+          "min": -23.63,
+          "max": 18.48,
+          "mean": -2.3676,
+          "stat": "Industry: Furniture Restoration"
+        },
+        {
+          "min": -51.38,
+          "max": 52.9,
+          "mean": -3.8788,
+          "stat": "Industry: Retail"
+        },
+        {
+          "min": -52.63,
+          "max": 24.26,
+          "mean": -3.0956,
+          "stat": "Industry: Book Publishing"
+        },
+        {
+          "min": -612.4,
+          "max": 77.9,
+          "mean": -55.8959,
+          "stat": "Industry: Gambling"
+        },
+        {
+          "min": -144.56,
+          "max": 278.08,
+          "mean": 58.6309,
+          "stat": "Sector: Manufacturing"
+        },
+        {
+          "min": 0,
+          "max": 0.11,
+          "mean": 0.0299,
+          "stat": "Government Size"
+        },
+        {
+          "min": -19.6,
+          "max": 6.06,
+          "mean": -2.0943,
+          "stat": "Welfare"
+        },
+        {
+          "min": -22.11,
+          "max": 11.49,
+          "mean": -3.4384,
+          "stat": "Public Healthcare"
+        },
+        {
+          "min": -0.49,
+          "max": 171.85,
+          "mean": 70.7686,
+          "stat": "Law Enforcement"
+        },
+        {
+          "min": -28.22,
+          "max": 27.07,
+          "mean": -3.7985,
+          "stat": "Business Subsidization"
+        },
+        {
+          "min": -2.45,
+          "max": 0,
+          "mean": -0.7673,
+          "stat": "Niceness"
+        },
+        {
+          "min": 0,
+          "max": 2.23,
+          "mean": 0.5431,
+          "stat": "Rudeness"
+        },
+        {
+          "min": -2.65,
+          "max": 0,
+          "mean": -0.2428,
+          "stat": "Intelligence"
+        },
+        {
+          "min": 0,
+          "max": 5.16,
+          "mean": 0.2408,
+          "stat": "Ignorance"
+        },
+        {
+          "min": 0,
+          "max": 2.92,
+          "mean": 0.7518,
+          "stat": "Compliance"
+        },
+        {
+          "min": 0,
+          "max": 7.11,
+          "mean": 1.0663,
+          "stat": "Safety"
+        },
+        {
+          "min": 0,
+          "max": 3.27,
+          "mean": 0.1483,
+          "stat": "Lifespan"
+        },
+        {
+          "min": -4.36,
+          "max": 1.97,
+          "mean": 0.0896,
+          "stat": "Ideological Radicality"
+        },
+        {
+          "min": -67.75,
+          "max": 28.86,
+          "mean": -5.1208,
+          "stat": "Defense Forces"
+        },
+        {
+          "min": -1.99,
+          "max": 8.07,
+          "mean": -0.0142,
+          "stat": "Pacifism"
+        },
+        {
+          "min": -0.12,
+          "max": 0.61,
+          "mean": 0.092,
+          "stat": "Taxation"
+        },
+        {
+          "min": -0.6,
+          "max": 0.16,
+          "mean": -0.3111,
+          "stat": "Freedom From Taxation"
+        },
+        {
+          "min": 0,
+          "max": 0.96,
+          "mean": 0.5059,
+          "stat": "Corruption"
+        },
+        {
+          "min": -0.49,
+          "max": 0,
+          "mean": -0.132,
+          "stat": "Integrity"
+        },
+        {
+          "min": 0,
+          "max": 506.74,
+          "mean": 38.5169,
+          "stat": "Authoritarianism"
+        },
+        {
+          "min": -1.36,
+          "max": 0.07,
+          "mean": -0.0922,
+          "stat": "Employment"
+        },
+        {
+          "min": -12.44,
+          "max": 4.05,
+          "mean": -1.8744,
+          "stat": "Public Transport"
+        },
+        {
+          "min": 0,
+          "max": 83.68,
+          "mean": 22.5875,
+          "stat": "Tourism"
+        },
+        {
+          "min": -1.31,
+          "max": 0.01,
+          "mean": -0.0491,
+          "stat": "Weaponization"
+        },
+        {
+          "min": -102.33,
+          "max": 0,
+          "mean": -6.4577,
+          "stat": "Recreational Drug Use"
+        },
+        {
+          "min": -41.54,
+          "max": 0,
+          "mean": -2.2342,
+          "stat": "Charmlessness"
+        },
+        {
+          "min": -1.97,
+          "max": 4.36,
+          "mean": -0.0896,
+          "stat": "Averageness"
+        },
+        {
+          "min": 0,
+          "max": 1.09,
+          "mean": 0.0494,
+          "stat": "Human Development Index"
+        },
+        {
+          "min": -16.27,
+          "max": 0,
+          "mean": -7.0258,
+          "stat": "Inclusiveness"
+        },
+        {
+          "min": -525.74,
+          "max": 266.91,
+          "mean": -1.4106,
+          "stat": "Average Income"
+        },
+        {
+          "min": -307.04,
+          "max": 121.74,
+          "mean": -1.4521,
+          "stat": "Average Income of Poor"
+        },
+        {
+          "min": -2163,
+          "max": 1368,
+          "mean": 6.6579,
+          "stat": "Average Income of Rich"
+        },
+        {
+          "min": -42.54,
+          "max": 18.99,
+          "mean": -4.5562,
+          "stat": "Public Education"
+        },
+        {
+          "min": -2.57,
+          "max": 0,
+          "mean": -0.3651,
+          "stat": "Crime"
+        },
+        {
+          "min": -9.3,
+          "max": 2.16,
+          "mean": -0.6177,
+          "stat": "Foreign Aid"
+        },
+        {
+          "min": -628.66,
+          "max": 204.3,
+          "mean": -64.4615,
+          "stat": "Average Disposable Income"
+        },
+        {
+          "min": 0,
+          "max": 0.68,
+          "mean": 0.0363,
+          "stat": "Patriotism"
+        },
+        {
+          "min": -8.58,
+          "max": 0,
+          "mean": -1.8005,
+          "stat": "Food Quality"
+        }
+      ],
+      "policiesAndNotabilities": [
+        {
+          "full": "sometimes removes notability: absence of drug laws",
+          "qualifier": "sometimes",
+          "behavior": "removes",
+          "type": "notability",
+          "name": "absence of drug laws"
+        },
+        {
+          "full": "sometimes adds notability: punitive income tax rates",
+          "qualifier": "sometimes",
+          "behavior": "adds",
+          "type": "notability",
+          "name": "punitive income tax rates"
+        },
+        {
+          "full": "sometimes adds notability: restrictive gun laws",
+          "qualifier": "sometimes",
+          "behavior": "adds",
+          "type": "notability",
+          "name": "restrictive gun laws"
+        }
+      ],
+      "leadsTo": []
+    },
+    {
+      "text": "\"I think it's clear to anyone with half a brain in their head that this will just not work,\" says @@RANDOM_NAME@@, a noted professor of social studies. \"The people who perpetrate these terrible crimes do so because they feel they have no other recourse to demonstrate their political opinions. They'll do anything and I'm sure they're not above hiring mercenaries. You must understand why terrorists act as they do and fix it! What we should do is to reach out to the ethnic and religious minorities and seek common ground! Negotiation is the key! Violence solves nothing.\"",
+      "result": "the government seeks peaceful forum with terrorists",
+      "choiceEffects": [
+        {
+          "min": 0,
+          "max": 0.38,
+          "mean": 0.0003,
+          "stat": "Civil Rights"
+        },
+        {
+          "min": -8.29,
+          "max": 0.01,
+          "mean": -0.1704,
+          "stat": "Death Rate"
+        },
+        {
+          "min": -0.47,
+          "max": 0,
+          "mean": -0.0003,
+          "stat": "Compassion"
+        },
+        {
+          "min": -87.62,
+          "max": 4.96,
+          "mean": -1.6033,
+          "stat": "Eco-Friendliness"
+        },
+        {
+          "min": -0.57,
+          "max": 0,
+          "mean": -0.0004,
+          "stat": "Social Conservatism"
+        },
+        {
+          "min": 0,
+          "max": 2.25,
+          "mean": 0.0014,
+          "stat": "Nudity"
+        },
+        {
+          "min": -24.61,
+          "max": 27.75,
+          "mean": 0.2582,
+          "stat": "Industry: Automobile Manufacturing"
+        },
+        {
+          "min": -40.66,
+          "max": 18.16,
+          "mean": -0.3062,
+          "stat": "Industry: Cheese Exports"
+        },
+        {
+          "min": -41.63,
+          "max": 24.7,
+          "mean": -1.0635,
+          "stat": "Industry: Basket Weaving"
+        },
+        {
+          "min": -428.19,
+          "max": 110.3,
+          "mean": -4.9719,
+          "stat": "Industry: Information Technology"
+        },
+        {
+          "min": -98,
+          "max": 28.13,
+          "mean": -0.0981,
+          "stat": "Industry: Pizza Delivery"
+        },
+        {
+          "min": -59.47,
+          "max": 32.11,
+          "mean": -0.4665,
+          "stat": "Industry: Trout Fishing"
+        },
+        {
+          "min": -117.33,
+          "max": 70.3,
+          "mean": -2.0711,
+          "stat": "Industry: Arms Manufacturing"
+        },
+        {
+          "min": -76.48,
+          "max": 29.17,
+          "mean": -0.9447,
+          "stat": "Sector: Agriculture"
+        },
+        {
+          "min": -38.25,
+          "max": 26.59,
+          "mean": -0.3921,
+          "stat": "Industry: Beverage Sales"
+        },
+        {
+          "min": -39.12,
+          "max": 28.2,
+          "mean": -0.468,
+          "stat": "Industry: Timber Woodchipping"
+        },
+        {
+          "min": -81.6,
+          "max": 34.59,
+          "mean": -1.0721,
+          "stat": "Industry: Mining"
+        },
+        {
+          "min": -29.47,
+          "max": 22.17,
+          "mean": 0.1148,
+          "stat": "Industry: Insurance"
+        },
+        {
+          "min": -47.71,
+          "max": 40.36,
+          "mean": -0.5217,
+          "stat": "Industry: Furniture Restoration"
+        },
+        {
+          "min": -176.27,
+          "max": 30.04,
+          "mean": -2.1186,
+          "stat": "Industry: Retail"
+        },
+        {
+          "min": -184.47,
+          "max": 1120.2,
+          "mean": -1.4295,
+          "stat": "Industry: Book Publishing"
+        },
+        {
+          "min": -670.68,
+          "max": 14.88,
+          "mean": -49.8165,
+          "stat": "Industry: Gambling"
+        },
+        {
+          "min": -126,
+          "max": 65.33,
+          "mean": -2.8765,
+          "stat": "Sector: Manufacturing"
+        },
+        {
+          "min": -0.28,
+          "max": 0.22,
+          "mean": 0.0038,
+          "stat": "Government Size"
+        },
+        {
+          "min": -29.25,
+          "max": 13.11,
+          "mean": -1.2058,
+          "stat": "Welfare"
+        },
+        {
+          "min": -41.6,
+          "max": 14.65,
+          "mean": -1.9222,
+          "stat": "Public Healthcare"
+        },
+        {
+          "min": -57.62,
+          "max": 20.99,
+          "mean": -2.2613,
+          "stat": "Law Enforcement"
+        },
+        {
+          "min": -68.25,
+          "max": 24.95,
+          "mean": -2.5875,
+          "stat": "Business Subsidization"
+        },
+        {
+          "min": -0.12,
+          "max": 0,
+          "mean": -0.0001,
+          "stat": "Religiousness"
+        },
+        {
+          "min": -0.35,
+          "max": 0,
+          "mean": -0.0002,
+          "stat": "Niceness"
+        },
+        {
+          "min": 0,
+          "max": 0.36,
+          "mean": 0.0002,
+          "stat": "Rudeness"
+        },
+        {
+          "min": -0.56,
+          "max": 1.84,
+          "mean": 0.0008,
+          "stat": "Intelligence"
+        },
+        {
+          "min": -0.22,
+          "max": 0.02,
+          "mean": -0.0002,
+          "stat": "Ignorance"
+        },
+        {
+          "min": -1,
+          "max": 2,
+          "mean": 0.0006,
+          "stat": "Weather"
+        },
+        {
+          "min": 0,
+          "max": 2.49,
+          "mean": 0.6481,
+          "stat": "Compliance"
+        },
+        {
+          "min": 0,
+          "max": 8.63,
+          "mean": 0.8739,
+          "stat": "Safety"
+        },
+        {
+          "min": -0.03,
+          "max": 4.87,
+          "mean": 0.1112,
+          "stat": "Lifespan"
+        },
+        {
+          "min": 0,
+          "max": 0.19,
+          "mean": 0.0002,
+          "stat": "Ideological Radicality"
+        },
+        {
+          "min": -364.58,
+          "max": 0,
+          "mean": -117.7722,
+          "stat": "Defense Forces"
+        },
+        {
+          "min": 0,
+          "max": 4.38,
+          "mean": 1.4883,
+          "stat": "Pacifism"
+        },
+        {
+          "min": -5.98,
+          "max": 0.6,
+          "mean": 0.0314,
+          "stat": "Taxation"
+        },
+        {
+          "min": -0.9,
+          "max": 0.67,
+          "mean": -0.1264,
+          "stat": "Freedom From Taxation"
+        },
+        {
+          "min": -3.82,
+          "max": 0,
+          "mean": -0.003,
+          "stat": "Authoritarianism"
+        },
+        {
+          "min": -1,
+          "max": 0,
+          "mean": -0.0006,
+          "stat": "Culture"
+        },
+        {
+          "min": -0.32,
+          "max": 0.15,
+          "mean": -0.0045,
+          "stat": "Employment"
+        },
+        {
+          "min": -21.78,
+          "max": 9.45,
+          "mean": -0.886,
+          "stat": "Public Transport"
+        },
+        {
+          "min": 0,
+          "max": 67.03,
+          "mean": 21.6712,
+          "stat": "Tourism"
+        },
+        {
+          "min": -0.34,
+          "max": 0,
+          "mean": -0.0233,
+          "stat": "Weaponization"
+        },
+        {
+          "min": -1.03,
+          "max": 3.9,
+          "mean": -0.3992,
+          "stat": "Recreational Drug Use"
+        },
+        {
+          "min": 0,
+          "max": 0.05,
+          "mean": 0,
+          "stat": "Secularism"
+        },
+        {
+          "min": -39.23,
+          "max": 0,
+          "mean": -0.7457,
+          "stat": "Charmlessness"
+        },
+        {
+          "min": -0.19,
+          "max": 0,
+          "mean": -0.0002,
+          "stat": "Averageness"
+        },
+        {
+          "min": -0.06,
+          "max": 1.62,
+          "mean": 0.0373,
+          "stat": "Human Development Index"
+        },
+        {
+          "min": -8.95,
+          "max": 1.74,
+          "mean": -0.0043,
+          "stat": "Primitiveness"
+        },
+        {
+          "min": -1.5,
+          "max": 3.1,
+          "mean": 0.001,
+          "stat": "Scientific Advancement"
+        },
+        {
+          "min": 0,
+          "max": 8.22,
+          "mean": 2.6058,
+          "stat": "Inclusiveness"
+        },
+        {
+          "min": -1488.14,
+          "max": 410.5,
+          "mean": -71.4952,
+          "stat": "Average Income"
+        },
+        {
+          "min": -1080.11,
+          "max": 273.89,
+          "mean": -37.2309,
+          "stat": "Average Income of Poor"
+        },
+        {
+          "min": -4482,
+          "max": 889,
+          "mean": -147.6518,
+          "stat": "Average Income of Rich"
+        },
+        {
+          "min": -79.24,
+          "max": 341.25,
+          "mean": -2.7591,
+          "stat": "Public Education"
+        },
+        {
+          "min": -2.28,
+          "max": 0,
+          "mean": -0.2523,
+          "stat": "Crime"
+        },
+        {
+          "min": -13,
+          "max": 5.03,
+          "mean": -0.4319,
+          "stat": "Foreign Aid"
+        },
+        {
+          "min": -1092.88,
+          "max": 920.83,
+          "mean": -61.9795,
+          "stat": "Average Disposable Income"
+        },
+        {
+          "min": -0.75,
+          "max": 0,
+          "mean": -0.1415,
+          "stat": "Patriotism"
+        },
+        {
+          "min": 0,
+          "max": 3.47,
+          "mean": 1.1563,
+          "stat": "Food Quality"
+        }
+      ],
+      "policiesAndNotabilities": [
+        {
+          "full": "sometimes adds notability: punitive income tax rates",
+          "qualifier": "sometimes",
+          "behavior": "adds",
+          "type": "notability",
+          "name": "punitive income tax rates"
+        }
+      ],
+      "leadsTo": []
+    },
+    {
+      "text": "\"We spit on @@NAME@@!\" expectorates @@RANDOM_NAME@@, leader of the Lilliputian Freedom Fighters. \"You disrespect our people and our country and everything we are! You spread your sickening influence where it is not wanted! You must change your ways and cease to oppose us or else there will be more bloodshed. You have been warned!\"",
+      "result": "the government regularly crumbles under the pressure of terrorists",
+      "choiceEffects": [
+        {
+          "min": -0.31,
+          "max": 16.06,
+          "mean": 0.9186,
+          "stat": "Death Rate"
+        },
+        {
+          "min": -12.39,
+          "max": 216.94,
+          "mean": 23.9405,
+          "stat": "Eco-Friendliness"
+        },
+        {
+          "min": -13.18,
+          "max": 142.13,
+          "mean": 9.6756,
+          "stat": "Industry: Automobile Manufacturing"
+        },
+        {
+          "min": -13.98,
+          "max": 160.86,
+          "mean": 13.099,
+          "stat": "Industry: Cheese Exports"
+        },
+        {
+          "min": -42.03,
+          "max": 202.74,
+          "mean": 35.9743,
+          "stat": "Industry: Basket Weaving"
+        },
+        {
+          "min": -64.17,
+          "max": 665.44,
+          "mean": 41.973,
+          "stat": "Industry: Information Technology"
+        },
+        {
+          "min": -18.06,
+          "max": 138.8,
+          "mean": 12.4155,
+          "stat": "Industry: Pizza Delivery"
+        },
+        {
+          "min": -19.94,
+          "max": 384.02,
+          "mean": 20.8603,
+          "stat": "Industry: Trout Fishing"
+        },
+        {
+          "min": -215.05,
+          "max": 438.62,
+          "mean": 64.3383,
+          "stat": "Industry: Arms Manufacturing"
+        },
+        {
+          "min": -17.57,
+          "max": 248.51,
+          "mean": 22.4885,
+          "stat": "Sector: Agriculture"
+        },
+        {
+          "min": -54.91,
+          "max": 189.82,
+          "mean": 18.2619,
+          "stat": "Industry: Beverage Sales"
+        },
+        {
+          "min": -120.01,
+          "max": 282.61,
+          "mean": 23.0263,
+          "stat": "Industry: Timber Woodchipping"
+        },
+        {
+          "min": -177.51,
+          "max": 397.66,
+          "mean": 41.5286,
+          "stat": "Industry: Mining"
+        },
+        {
+          "min": -3.74,
+          "max": 199.4,
+          "mean": 25.089,
+          "stat": "Industry: Insurance"
+        },
+        {
+          "min": -59.29,
+          "max": 166.18,
+          "mean": 19.3953,
+          "stat": "Industry: Furniture Restoration"
+        },
+        {
+          "min": -235.76,
+          "max": 379.64,
+          "mean": 49.5038,
+          "stat": "Industry: Retail"
+        },
+        {
+          "min": -36.45,
+          "max": 400.7,
+          "mean": 26.8179,
+          "stat": "Industry: Book Publishing"
+        },
+        {
+          "min": -53.01,
+          "max": 1968.9,
+          "mean": 238.9725,
+          "stat": "Industry: Gambling"
+        },
+        {
+          "min": -229.69,
+          "max": 479.77,
+          "mean": 109.9881,
+          "stat": "Sector: Manufacturing"
+        },
+        {
+          "min": -0.86,
+          "max": 0,
+          "mean": -0.2775,
+          "stat": "Government Size"
+        },
+        {
+          "min": -14.45,
+          "max": 137.49,
+          "mean": 18.2281,
+          "stat": "Welfare"
+        },
+        {
+          "min": -23.6,
+          "max": 209.94,
+          "mean": 38.3047,
+          "stat": "Public Healthcare"
+        },
+        {
+          "min": -1035.09,
+          "max": -1.02,
+          "mean": -438.489,
+          "stat": "Law Enforcement"
+        },
+        {
+          "min": -60.66,
+          "max": 238.97,
+          "mean": 53.1405,
+          "stat": "Business Subsidization"
+        },
+        {
+          "min": -1,
+          "max": 0,
+          "mean": -0.119,
+          "stat": "Niceness"
+        },
+        {
+          "min": -0.5,
+          "max": -0.04,
+          "mean": -0.3681,
+          "stat": "Cheerfulness"
+        },
+        {
+          "min": -6,
+          "max": -1,
+          "mean": -1.0179,
+          "stat": "Weather"
+        },
+        {
+          "min": -8.44,
+          "max": -0.01,
+          "mean": -2.5682,
+          "stat": "Compliance"
+        },
+        {
+          "min": -24.16,
+          "max": 0,
+          "mean": -3.9115,
+          "stat": "Safety"
+        },
+        {
+          "min": -7.53,
+          "max": 0.11,
+          "mean": -0.3729,
+          "stat": "Lifespan"
+        },
+        {
+          "min": -1350.21,
+          "max": -0.51,
+          "mean": -413.8749,
+          "stat": "Defense Forces"
+        },
+        {
+          "min": -3.71,
+          "max": 0.81,
+          "mean": -0.0958,
+          "stat": "Pacifism"
+        },
+        {
+          "min": -3.42,
+          "max": 11.27,
+          "mean": -0.9252,
+          "stat": "Taxation"
+        },
+        {
+          "min": 0,
+          "max": 4.87,
+          "mean": 3.6563,
+          "stat": "Freedom From Taxation"
+        },
+        {
+          "min": 0,
+          "max": 2,
+          "mean": 0.0071,
+          "stat": "Culture"
+        },
+        {
+          "min": -0.55,
+          "max": 2.74,
+          "mean": 0.0924,
+          "stat": "Employment"
+        },
+        {
+          "min": -12.88,
+          "max": 202.94,
+          "mean": 17.802,
+          "stat": "Public Transport"
+        },
+        {
+          "min": -179.73,
+          "max": -0.02,
+          "mean": -57.6379,
+          "stat": "Tourism"
+        },
+        {
+          "min": 0,
+          "max": 0.99,
+          "mean": 0.1676,
+          "stat": "Weaponization"
+        },
+        {
+          "min": 0,
+          "max": 2.64,
+          "mean": 1.2404,
+          "stat": "Recreational Drug Use"
+        },
+        {
+          "min": 0,
+          "max": 0.12,
+          "mean": 0.0023,
+          "stat": "Obesity"
+        },
+        {
+          "min": 0,
+          "max": 72.67,
+          "mean": 11.4195,
+          "stat": "Charmlessness"
+        },
+        {
+          "min": -2.51,
+          "max": 0.04,
+          "mean": -0.1242,
+          "stat": "Human Development Index"
+        },
+        {
+          "min": -1848.86,
+          "max": 2332.17,
+          "mean": 144.8212,
+          "stat": "Average Income"
+        },
+        {
+          "min": -1319.49,
+          "max": 2008.59,
+          "mean": 87.6672,
+          "stat": "Average Income of Poor"
+        },
+        {
+          "min": -4327,
+          "max": 5265,
+          "mean": 231.3821,
+          "stat": "Average Income of Rich"
+        },
+        {
+          "min": -33.37,
+          "max": 275.95,
+          "mean": 47.5971,
+          "stat": "Public Education"
+        },
+        {
+          "min": 0,
+          "max": 5.86,
+          "mean": 1.1453,
+          "stat": "Crime"
+        },
+        {
+          "min": -7.02,
+          "max": 56.69,
+          "mean": 7.2893,
+          "stat": "Foreign Aid"
+        },
+        {
+          "min": -4175.29,
+          "max": 3376.64,
+          "mean": 842.1146,
+          "stat": "Average Disposable Income"
+        },
+        {
+          "min": -1.47,
+          "max": 0,
+          "mean": -0.3827,
+          "stat": "Patriotism"
+        }
+      ],
+      "policiesAndNotabilities": [
+        {
+          "full": "sometimes removes notability: punitive income tax rates",
+          "qualifier": "sometimes",
+          "behavior": "removes",
+          "type": "notability",
+          "name": "punitive income tax rates"
+        }
+      ],
+      "leadsTo": []
+    },
+    {
+      "text": "\"Is terrorism such a terrible thing? Really?\" asks @@RANDOM_NAME@@, avant garde journalist, discreetly sliding a pipe bomb under your desk. \"These people are simply expressing their political opinion the best way they know how. I think we should legalise terrorism as a legitimate form of political commentary. It'll certainly get people interested, don't you think?\"",
+      "result": "the streets are ravaged by murder and violence to prove political points",
+      "choiceEffects": [
+        {
+          "min": -2.85,
+          "max": 0,
+          "mean": -0.0049,
+          "stat": "Civil Rights"
+        },
+        {
+          "min": -0.67,
+          "max": 0,
+          "mean": -0.0011,
+          "stat": "Economy"
+        },
+        {
+          "min": 0,
+          "max": 22,
+          "mean": 6.5954,
+          "stat": "Political Freedom"
+        },
+        {
+          "min": -0.92,
+          "max": 0,
+          "mean": -0.0016,
+          "stat": "Wealth Gaps"
+        },
+        {
+          "min": 0,
+          "max": 48.71,
+          "mean": 4.9524,
+          "stat": "Death Rate"
+        },
+        {
+          "min": -1.36,
+          "max": 0,
+          "mean": -0.0023,
+          "stat": "Compassion"
+        },
+        {
+          "min": -15.84,
+          "max": 150.77,
+          "mean": 8.019,
+          "stat": "Eco-Friendliness"
+        },
+        {
+          "min": 0,
+          "max": 4.28,
+          "mean": 0.0073,
+          "stat": "Social Conservatism"
+        },
+        {
+          "min": -9,
+          "max": 0,
+          "mean": -0.0154,
+          "stat": "Nudity"
+        },
+        {
+          "min": -43.81,
+          "max": 94.32,
+          "mean": 6.1987,
+          "stat": "Industry: Automobile Manufacturing"
+        },
+        {
+          "min": -66.88,
+          "max": 116.87,
+          "mean": 5.2152,
+          "stat": "Industry: Cheese Exports"
+        },
+        {
+          "min": -70.86,
+          "max": 183.59,
+          "mean": 13.7999,
+          "stat": "Industry: Basket Weaving"
+        },
+        {
+          "min": -80.45,
+          "max": 1392.56,
+          "mean": 23.2143,
+          "stat": "Industry: Information Technology"
+        },
+        {
+          "min": -35.31,
+          "max": 444.32,
+          "mean": 62.1753,
+          "stat": "Industry: Pizza Delivery"
+        },
+        {
+          "min": -78.14,
+          "max": 165.36,
+          "mean": 7.3893,
+          "stat": "Industry: Trout Fishing"
+        },
+        {
+          "min": -336.77,
+          "max": 372.93,
+          "mean": 25.6425,
+          "stat": "Industry: Arms Manufacturing"
+        },
+        {
+          "min": -72.99,
+          "max": 149.52,
+          "mean": 11.0068,
+          "stat": "Sector: Agriculture"
+        },
+        {
+          "min": -36.93,
+          "max": 537.8,
+          "mean": 111.115,
+          "stat": "Industry: Beverage Sales"
+        },
+        {
+          "min": -88.14,
+          "max": 114.65,
+          "mean": 11.7323,
+          "stat": "Industry: Timber Woodchipping"
+        },
+        {
+          "min": -116.94,
+          "max": 219.99,
+          "mean": 19.2408,
+          "stat": "Industry: Mining"
+        },
+        {
+          "min": -67.25,
+          "max": 65.71,
+          "mean": 3.1364,
+          "stat": "Industry: Insurance"
+        },
+        {
+          "min": -51.66,
+          "max": 92.11,
+          "mean": 8.9563,
+          "stat": "Industry: Furniture Restoration"
+        },
+        {
+          "min": -138.93,
+          "max": 284.7,
+          "mean": 30.0113,
+          "stat": "Industry: Retail"
+        },
+        {
+          "min": -42.79,
+          "max": 189.13,
+          "mean": 10.8947,
+          "stat": "Industry: Book Publishing"
+        },
+        {
+          "min": -54.84,
+          "max": 1981.82,
+          "mean": 224.2992,
+          "stat": "Industry: Gambling"
+        },
+        {
+          "min": -356.21,
+          "max": 460.06,
+          "mean": 45.6415,
+          "stat": "Sector: Manufacturing"
+        },
+        {
+          "min": -0.24,
+          "max": 0,
+          "mean": -0.0634,
+          "stat": "Government Size"
+        },
+        {
+          "min": -25.3,
+          "max": 95.51,
+          "mean": 8.5466,
+          "stat": "Welfare"
+        },
+        {
+          "min": -43.53,
+          "max": 117.26,
+          "mean": 13.9502,
+          "stat": "Public Healthcare"
+        },
+        {
+          "min": -420.72,
+          "max": 0,
+          "mean": -167.2421,
+          "stat": "Law Enforcement"
+        },
+        {
+          "min": -44.21,
+          "max": 202.89,
+          "mean": 23.1538,
+          "stat": "Business Subsidization"
+        },
+        {
+          "min": 0,
+          "max": 0.53,
+          "mean": 0.0009,
+          "stat": "Income Equality"
+        },
+        {
+          "min": -1.46,
+          "max": 0,
+          "mean": -0.0025,
+          "stat": "Niceness"
+        },
+        {
+          "min": -0.07,
+          "max": 106.23,
+          "mean": 9.813,
+          "stat": "Rudeness"
+        },
+        {
+          "min": 0,
+          "max": 9.11,
+          "mean": 0.8835,
+          "stat": "Intelligence"
+        },
+        {
+          "min": -7.82,
+          "max": 0,
+          "mean": -0.9871,
+          "stat": "Ignorance"
+        },
+        {
+          "min": -1.93,
+          "max": 0,
+          "mean": -0.2546,
+          "stat": "Health"
+        },
+        {
+          "min": -3,
+          "max": 0,
+          "mean": -2.9949,
+          "stat": "Weather"
+        },
+        {
+          "min": -8.3,
+          "max": 0,
+          "mean": -2.6717,
+          "stat": "Compliance"
+        },
+        {
+          "min": -22.49,
+          "max": 6.45,
+          "mean": -2.3784,
+          "stat": "Safety"
+        },
+        {
+          "min": -12.68,
+          "max": 0,
+          "mean": -1.4815,
+          "stat": "Lifespan"
+        },
+        {
+          "min": -7.33,
+          "max": 3.25,
+          "mean": -1.3391,
+          "stat": "Ideological Radicality"
+        },
+        {
+          "min": -77.53,
+          "max": 186.18,
+          "mean": 17.3641,
+          "stat": "Defense Forces"
+        },
+        {
+          "min": -8,
+          "max": 0,
+          "mean": -1.657,
+          "stat": "Pacifism"
+        },
+        {
+          "min": -1,
+          "max": 0,
+          "mean": -0.0017,
+          "stat": "Economic Freedom"
+        },
+        {
+          "min": -2.41,
+          "max": 0.06,
+          "mean": -0.3691,
+          "stat": "Taxation"
+        },
+        {
+          "min": -0.18,
+          "max": 2.15,
+          "mean": 1.1037,
+          "stat": "Freedom From Taxation"
+        },
+        {
+          "min": -15.84,
+          "max": 4.08,
+          "mean": -3.1318,
+          "stat": "Corruption"
+        },
+        {
+          "min": -1.5,
+          "max": 5.34,
+          "mean": 0.9794,
+          "stat": "Integrity"
+        },
+        {
+          "min": -2067.09,
+          "max": 0,
+          "mean": -227.5229,
+          "stat": "Authoritarianism"
+        },
+        {
+          "min": -0.54,
+          "max": 0.09,
+          "mean": -0.0917,
+          "stat": "Employment"
+        },
+        {
+          "min": -11.76,
+          "max": 59.28,
+          "mean": 6.5648,
+          "stat": "Public Transport"
+        },
+        {
+          "min": -195.61,
+          "max": 0,
+          "mean": -47.7753,
+          "stat": "Tourism"
+        },
+        {
+          "min": 0,
+          "max": 0.87,
+          "mean": 0.2259,
+          "stat": "Weaponization"
+        },
+        {
+          "min": -4.39,
+          "max": 2.76,
+          "mean": 1.5856,
+          "stat": "Recreational Drug Use"
+        },
+        {
+          "min": 0,
+          "max": 1.24,
+          "mean": 0.5307,
+          "stat": "Obesity"
+        },
+        {
+          "min": 0,
+          "max": 74.6,
+          "mean": 9.7308,
+          "stat": "Charmlessness"
+        },
+        {
+          "min": -3.25,
+          "max": 7.33,
+          "mean": 1.3391,
+          "stat": "Averageness"
+        },
+        {
+          "min": -4.23,
+          "max": 0,
+          "mean": -0.4943,
+          "stat": "Human Development Index"
+        },
+        {
+          "min": -576.41,
+          "max": 4422.57,
+          "mean": 562.33,
+          "stat": "Average Income"
+        },
+        {
+          "min": -353.68,
+          "max": 3762.48,
+          "mean": 200.0021,
+          "stat": "Average Income of Poor"
+        },
+        {
+          "min": -6840,
+          "max": 22949,
+          "mean": 2538.2607,
+          "stat": "Average Income of Rich"
+        },
+        {
+          "min": -42.64,
+          "max": 257.72,
+          "mean": 18.2826,
+          "stat": "Public Education"
+        },
+        {
+          "min": 0,
+          "max": 5.77,
+          "mean": 1.3494,
+          "stat": "Crime"
+        },
+        {
+          "min": -6.45,
+          "max": 61.85,
+          "mean": 2.4586,
+          "stat": "Foreign Aid"
+        },
+        {
+          "min": -60.86,
+          "max": 2843.37,
+          "mean": 580.5011,
+          "stat": "Average Disposable Income"
+        },
+        {
+          "min": 0,
+          "max": 0.1,
+          "mean": 0.0002,
+          "stat": "Patriotism"
+        },
+        {
+          "min": -2.9,
+          "max": 0,
+          "mean": -0.5079,
+          "stat": "Food Quality"
+        }
+      ],
+      "policiesAndNotabilities": [
+        {
+          "full": "removes policy: No Dissent",
+          "qualifier": "definitive",
+          "behavior": "removes",
+          "type": "policy",
+          "name": "No Dissent"
+        },
+        {
+          "full": "sometimes adds policy: Public Protest",
+          "qualifier": "sometimes",
+          "behavior": "adds",
+          "type": "policy",
+          "name": "Public Protest"
+        },
+        {
+          "full": "sometimes adds notability: deadly medical pandemics",
+          "qualifier": "sometimes",
+          "behavior": "adds",
+          "type": "notability",
+          "name": "deadly medical pandemics"
+        },
+        {
+          "full": "sometimes removes notability: punitive income tax rates",
+          "qualifier": "sometimes",
+          "behavior": "removes",
+          "type": "notability",
+          "name": "punitive income tax rates"
+        },
+        {
+          "full": "sometimes removes notability: restrictive gun laws",
+          "qualifier": "sometimes",
+          "behavior": "removes",
+          "type": "notability",
+          "name": "restrictive gun laws"
+        }
+      ],
+      "leadsTo": []
+    }
+  ]
+}
