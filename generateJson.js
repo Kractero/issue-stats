@@ -13,7 +13,7 @@ export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-let globalCount = 400;
+let globalCount = 0;
 for (let filename of filenames) {
   const res = await fetch(`${BASE_REPO_URL}${filename}`);
   const text = await res.text();
@@ -80,7 +80,6 @@ for (let filename of filenames) {
         const leadsTo = [];
 
         resultFmt.forEach((result) => {
-          try {
             if (result.includes("policy") || result.includes("notability")) {
               policiesAndNotabilities.push({
                 full: result,
@@ -103,9 +102,9 @@ for (let filename of filenames) {
               };
               let [range, mean] = result.split(" (");
               if (!range.includes(" to ")) {
-                let [effect, stat] = range.split(" ");
+                let [effect, ...stat] = range.split(" ");
                 effects.max = Number(effect.trim().replace("+", ""));
-                effects.stat = stat.trim();
+                effects.stat = stat.join(" ");
                 effects.mean = "";
               } else {
                 let [min, maxAndStat] = range.split(" to ");
@@ -124,9 +123,6 @@ for (let filename of filenames) {
               }
               choiceEffects.push(effects);
             }
-          } catch (err) {
-            logError(issueNum, title, err.message);
-          }
         });
 
         if (issueObject.options[index - 1]) {
