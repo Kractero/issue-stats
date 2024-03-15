@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Issue Stat Getter
 // @namespace    Kra
-// @version      1.1
+// @version      2.0
 // @description  Get issues results shown to you.
 // @author       Kractero
 // @match        https://www.nationstates.net/page=show_dilemma/dilemma=*
@@ -32,28 +32,9 @@ function levenshteinDistance(str1, str2) {
   return 1 - matrix[m][n] / Math.max(m, n);
 }
 
-
 (async function () {
   'use strict';
 
-  const jsonRanges = [
-    "0-99",
-    "100-199",
-    "200-299",
-    "300-399",
-    "400-499",
-    "500-599",
-    "600-699",
-    "700-799",
-    "800-899",
-    "900-999",
-    "1000-1099",
-    "1100-1199",
-    "1200-1299",
-    "1300-1399",
-    "1400-1499",
-    "1500-1586"
-  ];
   const census = [
     ['0', 'Civil Rights', 'liberal'],
     ['1', 'Economy', 'economy'],
@@ -146,38 +127,20 @@ function levenshteinDistance(str1, str2) {
     const parser = new DOMParser();
     const document = parser.parseFromString(ranksAsText, 'text/xml');
     const scaleElements = document.querySelectorAll('SCALE');
-    const scales = [];
-    scaleElements.forEach((scaleElement) => {
+    const map = Array.from(scaleElements).reduce((acc, scaleElement) => {
       const id = scaleElement.getAttribute('id');
-      const prank = scaleElement.querySelector('PRANK').textContent;
+      const prank = parseInt(scaleElement.querySelector('PRANK').textContent);
       const censusEntry = census.find(item => item[0] === id);
-      if (censusEntry) {
-        const scaleName = censusEntry[1];
-        const scaleType = censusEntry[2];
-        if (scaleName && scaleType) {
-          scales.push({
-            id: scaleName,
-            type: scaleType,
-            prank: prank
-          });
-        }
+      if (censusEntry && prank) {
+          const [scaleName, scaleType] = censusEntry.slice(1);
+          let img = `/images/trophies/${scaleType}-1.png`;
+          if (prank > 1) img = `/images/trophies/${scaleType}-5.png`;
+          if (prank > 5) img = `/images/trophies/${scaleType}-10.png`;
+          if (prank > 10) img = `/images/trophies/${scaleType}-100.png`;
+          acc[scaleName] = img;
       }
-    });
-    const map = scales.reduce((acc, category) => {
-      const rank = category.prank;
-      let img = "";
-      if (rank > 10) {
-        img = `/images/trophies/${category.type}-100.png`;
-      } else if (rank > 5) {
-        img = `/images/trophies/${category.type}-10.png`;
-      } else if (rank > 1) {
-        img = `/images/trophies/${category.type}-5.png`;
-      } else {
-        img = `/images/trophies/${category.type}-1.png`;
-      }
-      acc[category.id] = img;
       return acc;
-    }, {});
+      }, {});
     return map;
   }
 
@@ -209,28 +172,21 @@ function levenshteinDistance(str1, str2) {
   document.getElementsByTagName("head")[0].appendChild(stylesheet);
 
   const id = window.location.href.replace('https://www.nationstates.net/page=show_dilemma/dilemma=', '');
-  let nation = "";
-  if (document.querySelector('.bannernation2')) {
-    nation = document.querySelector('.bannernation2').innerText;
-  } else {
-    nation = document.querySelector('#loggedin').getAttribute('data-nname')
-  }
+  const nation = document.querySelector('.bannernation2') ? document.querySelector('.bannernation2').innerText : document.querySelector('#loggedin').getAttribute('data-nname');
   const choices = document.querySelectorAll('.diloptions li p:first-child');
   const filterSpot = document.querySelector('.dilemma');
-
   const shownValues = JSON.parse(localStorage.getItem('uncheckedValues') ?? '{}');
-
+  const showNonStats = localStorage.getItem('showNonStats') === 'false' ? false : true;
   const checkboxes = document.createElement('div');
+  const buttonLabels = ["Filter Categories", "Toggle All", "Regenerate Badges", "Hide Non-Stats", "Toggle One Percent", "Toggle Five Percent", "Toggle Ten Percent", "Toggle Unranked"];
 
-  const buttonLabels = ["Filter Categories", "Toggle All", "Regenerate Badges", "Toggle One Percent", "Toggle Five Percent", "Toggle Ten Percent", "Toggle Unranked"];
-
-  const [toggleButton, toggleCheckStatus, gatherBadges, toggleOnePercent, toggleFivePercent, toggleTenPercent, toggleUnranked] = buttonLabels.map((label) => {
+  const [toggleButton, toggleCheckStatus, gatherBadges, hideNotStats, toggleOnePercent, toggleFivePercent, toggleTenPercent, toggleUnranked] = buttonLabels.map((label) => {
     const button = document.createElement("button");
     button.textContent = label;
     return button;
   });
 
-  const hide = [checkboxes, toggleCheckStatus, gatherBadges, toggleOnePercent, toggleFivePercent, toggleTenPercent, toggleUnranked];
+  const hide = [checkboxes, toggleCheckStatus, gatherBadges, hideNotStats, toggleOnePercent, toggleFivePercent, toggleTenPercent, toggleUnranked];
   hide.forEach(element => element.classList.add('hidden'));
 
   toggleButton.addEventListener('click', () => {
@@ -306,44 +262,49 @@ function levenshteinDistance(str1, str2) {
   toggleTenPercent.addEventListener('click', () => toggleBadgeCheckboxes('-10.png'));
   toggleUnranked.addEventListener('click', () => toggleBadgeCheckboxes('-100.png'));
 
-  filterSpot.prepend(toggleButton, toggleCheckStatus, gatherBadges, checkboxes, toggleOnePercent, toggleFivePercent, toggleTenPercent, toggleUnranked);
+  filterSpot.prepend(toggleButton, toggleCheckStatus, gatherBadges, hideNotStats, checkboxes, toggleOnePercent, toggleFivePercent, toggleTenPercent, toggleUnranked);
 
+  let badges = JSON.parse(localStorage.getItem('badges') || '{}');
+  if (!badges[nation] || Object.keys(badges[nation]).length === 0) {
+    badges[nation] = await getBadgeMap(nation);
+    localStorage.setItem('badges', JSON.stringify(badges));
+  }
   const choicesObject = Array.from(choices).map(choice => choice.textContent.trim());
 
-  const range = jsonRanges.find(range => {
-    const [start, end] = range.split('-');
-    return Number(id) >= Number(start) && Number(id) <= Number(end);
-  });
+  const num = parseInt(document.querySelector('.dpapervol').textContent.split(' ').at(-1).replace(',', ''))
 
-  const getSubList = await fetch(`https://raw.githubusercontent.com/Kractero/issue-stats/master/json/${range}.json`);
-  const issueSubList = await getSubList.json();
-  const correspondIdx = Object.keys(issueSubList).filter(issue => issue === id);
-  const issue = issueSubList[Number(correspondIdx)];
-  const selections = Object.keys(issue.options).map(choice => issue.options[choice].text);
+  const getSubList = await fetch(`https://raw.githubusercontent.com/Kractero/issue-stats/master/issues/${num}.json`);
+  const issue = await getSubList.json();
   const bestMatchArray = choicesObject.map((option) => {
     option = option.replace(/“|”/g, '"');
     let bestMatchNum = 0;
     let bestScore = 0;
 
-    selections.forEach((choice, i) => {
-      const score = levenshteinDistance(option, choice);
+    issue.options.forEach((choice, i) => {
+      const score = levenshteinDistance(option, choice.text);
       if (score > bestScore) {
         bestScore = score;
         bestMatchNum = i;
       }
     });
 
+    issue.options[bestMatchNum].choiceEffects.forEach((item) => {
+      const shortForm = census.find(censusEntry => censusEntry[1] === item.stat)
+      const imageUrl = badges[nation][item.stat];
+      item.image = imageUrl;
+    })
+
+    issue.options[bestMatchNum].choiceEffects.sort((a, b) => {
+      const aValue = parseInt(a.image.match(/-(\d+)\.png$/)[1]);
+      const bValue = parseInt(b.image.match(/-(\d+)\.png$/)[1]);
+      return aValue - bValue;
+    });
+
     return {
-      text: selections[bestMatchNum],
+      ...issue.options[bestMatchNum],
       idx: bestMatchNum
     };
   });
-
-  let badges = JSON.parse(localStorage.getItem('badges') || '{}');
-  if (!badges[nation] || badges[nation] === {}) {
-    badges[nation] = await getBadgeMap(nation);
-    localStorage.setItem('badges', JSON.stringify(badges));
-  }
 
   function toggleBadgeCheckboxes(suffix) {
     let badges = JSON.parse(localStorage.getItem('badges') || '{}');
@@ -361,88 +322,67 @@ function levenshteinDistance(str1, str2) {
     figureOutCheckStatus();
   }
 
-  let notabilities_and_possibilities = [];
-  let json = bestMatchArray.map((option) => {
-    if (issue.options[String(option.idx + 1)].results) {
-      let split = issue.options[String(option.idx + 1)].results.split('\n');
-      let notabilities_and_possibilities_subarr = [];
-      const effectArr = split.map((effect) => {
-        const effectContent = getEffectContent(effect);
-        const censusEntry = Object.keys(badges[nation]).find(item => item === effectContent);
-        if (censusEntry) {
-          return [effectContent, badges[nation][effectContent], effect];
-        } else {
-          notabilities_and_possibilities_subarr.push(effect);
-        }
-      }).filter(item => item);
-      notabilities_and_possibilities.push(notabilities_and_possibilities_subarr);
-      return effectArr;
-    }
-  }).filter(json => json).map(subArray => {
-    if (subArray) {
-      return subArray.sort((a, b) => {
-        const regex = /-(\d+)\.png$/;
-        const aValue = parseInt(a[1].match(regex)[1]);
-        const bValue = parseInt(b[1].match(regex)[1]);
-        return aValue - bValue;
-      });
-    }
-    return null;
-  });
-
   const approves = document.querySelectorAll('.diloptions li');
 
   approves.forEach((option, index) => {
     const fatherDiv = document.createElement('div');
     const policyDiv = document.createElement('div');
-    fatherDiv.classList.add('effect-div');
-
-    if (notabilities_and_possibilities[index]) {
-      notabilities_and_possibilities[index].map(policies => {
-        const policy = document.createElement('p');
-        policy.textContent = policies;
-        policyDiv.append(policy);
-      });
+    policyDiv.classList.add('notstats')
+    if (showNonStats === false) {
+      policyDiv.classList.add('hidden');
     }
+    fatherDiv.classList.add('effect-div');
+    if (!bestMatchArray[index]) {
+      const probableBug = document.createElement('p');
+      probableBug.textContent = "No census effects in the JSON, probable bug!";
+      probableBug.style.margin = "0";
+      badDiv.appendChild(probableBug);
+    }
+
+    bestMatchArray[index].policiesAndNotabilities.map(policies => {
+      const policy = document.createElement('p');
+      policy.textContent = policies.full;
+      policyDiv.append(policy);
+    });
+
+    bestMatchArray[index].leadsTo.map(lead => {
+      const policy = document.createElement('p');
+      policy.textContent = `Leads to #${lead}`;
+      policyDiv.append(policy);
+    });
 
     const goodDiv = document.createElement('div');
     const badDiv = document.createElement('div');
 
     let showValues = localStorage.getItem('uncheckedValues');
 
-    if (json[index]) {
-      json[index].forEach((item) => {
-        const [effect, imageUrl, actual] = item;
-        const effectDiv = document.createElement('div');
-        const average = document.createElement('p');
-        average.textContent = actual;
-        average.style.margin = "0";
+    bestMatchArray[index].choiceEffects.forEach((item) => {
+      const effectDiv = document.createElement('div');
+      const average = document.createElement('p');
+      average.textContent = `${item.min} to ${item.max > 0 ? `+${item.max}` : item.max} ${item.stat} ${item.mean ? `(mean ${item.mean > 0 ? `+${item.mean}` : item.mean})` : ''}`;
+      average.style.margin = "0";
 
-        const meanValue = actual.includes('mean') ? actual.split('mean')[1].trim() : actual.split(' ')[0];
-        const isNegative = meanValue.startsWith('-');
+      const image = document.createElement('img');
+      image.src = item.image;
 
-        const image = document.createElement('img');
-        image.src = imageUrl;
+      effectDiv.append(image, average);
+      effectDiv.classList.add('effect-selector', 'hidden');
+      effectDiv.style.color = item.mean < 0 ? 'red' : 'green';
+      item.mean < 0 ? badDiv.appendChild(effectDiv) : goodDiv.appendChild(effectDiv);
 
-        effectDiv.append(image, average);
-        effectDiv.classList.add('effect-selector', 'hidden');
-        effectDiv.style.color = isNegative ? 'red' : 'green';
-        isNegative ? badDiv.appendChild(effectDiv) : goodDiv.appendChild(effectDiv);
-
-        if (showValues && JSON.parse(showValues)[nation]) {
-          const shownValues = JSON.parse(showValues)[nation];
-          effectDiv.classList.toggle('effect', shownValues.some(value => value === effect));
-        }
-      });
-    } else {
-      const probableBug = document.createElement('p');
-      probableBug.textContent = "No census effects in the JSON, probable bug!";
-      probableBug.style.margin = "0";
-      badDiv.appendChild(probableBug);
-    }
+      if (showValues && JSON.parse(showValues)[nation]) {
+        const shownValues = JSON.parse(showValues)[nation];
+        effectDiv.classList.toggle('effect', shownValues.some(value => value === item.stat));
+      }
+    });
     fatherDiv.append(goodDiv, badDiv);
     option.appendChild(policyDiv);
     option.appendChild(fatherDiv);
   });
+
+  hideNotStats.addEventListener('click', () => {
+    document.querySelector('.notstats').classList.toggle('hidden');
+    localStorage.setItem('showNonStats', !showNonStats);
+  })
 
 })();
