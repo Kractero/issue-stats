@@ -18,17 +18,30 @@ node generateJson.js
 ## Known Issues
 Please file an issue if you run into any bugs, because there will be bugs.
 
-A lot of the issues may arise from issues that have choices that differ slightly based on a nation's policy. Usually, the effects of these are identical, but may differ slightly, I would take caution with these.
+The old version consisted of a lot of issues and required manual fixing due to some inconsistencies in ValentineZ's repo, which I forked and made corrections to. This fixed a vast majority and noted in `/val_z_error`, but can also be found in `old/`'s problem jsons.
+
+### Post-Parser Errors
+
+The current errors are `errors.txt`, which are Brasilistan Go Boom (there are no effects) and a new issue.
+
+### Technically complete but potentially problematic
+
+Some issues that have choices that differ slightly based on a nation's policy can mess with the algorithm that matches the choice to the corresponding issue since the text is usually extremely similar or exactly the same. Usually, the effects of these are identical, but may differ slightly, I would take caution with these.
 
 Below is an incomplete list of some issues that may act funky:
 
 ### Issues that do not appear with corresponding effects in MWQ
 
 1 - Where's The Love Gone - random 5th choice in Valentine Z
+
 32 - One Wife Is Never Enough, Say Polygamists - random 5th
+
 123 - Now, Vat's Food For Thought - random 7th
+
 279 - A Vat Lot of Trouble - random 6th
+
 411 -  Outed Teacher Ousted - random 4th
+
 488 - Bright Orange is the New Black - random 6th and 7th issue
 
 ### Some Branching Issues
@@ -60,10 +73,6 @@ Below is an incomplete list of some issues that may act funky:
 527
 
 ---
-
-The old version consisted of a lot of issues and required manual fixing due to some inconsistencies in ValentineZ's repo, which I forked and made corrections to. This fixed a vast majority and noted in `/val_z_error`, but can also be found in `old/`'s problem jsons.
-
-The current errors are `errors.txt`, which are Brasilistan Go Boom (there are no effects) and a new issue.
 
 Some stats may be stale (miniscule amount tbh), as MWQ's mean stats change very often when new data points are entered and this is essentially a snapshot of MWQ.
 
