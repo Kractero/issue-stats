@@ -1,38 +1,71 @@
 # Issue Stat Grabber
 
-My TamperMonkey script that gets issue stats and puts them on your issues page.
+My TamperMonkey script that gets issue stats and puts them on your issues page, built from joining ValentineZ's issue github repository data with the MWQ issue effects database.
+
+Last updated with MWQ data: `2024-03-14`
 
 ## Usage
 [Add the script](https://github.com/Kractero/issue-stats/raw/main/issueStatGetter.user.js) to Tampermonkey.
 
-If you want to build your own issues_list.json, make sure you have Python on your system (I manually fixed a ton so this might not be identical)
+If you want to build your own issues json, make sure you have Node.js on your system.
 
 ```
 git clone https://github.com/Kractero/issue-stats.git
-pip install -r requirements.txt
-python generate_json.py
+npm install
+node generateJson.js
 ```
+
+## Known Issues
+Please file an issue if you run into any bugs, because there will be bugs.
+
+A lot of the issues may arise from issues that have choices that differ slightly based on a nation's policy. Usually, the effects of these are identical, but may differ slightly, I would take caution with these.
+
+Below is an incomplete list of some issues that may act funky:
+
+### Issues that do not appear with corresponding effects in MWQ
+
+1 - Where's The Love Gone - random 5th choice in Valentine Z
+32 - One Wife Is Never Enough, Say Polygamists - random 5th
+123 - Now, Vat's Food For Thought - random 7th
+279 - A Vat Lot of Trouble - random 6th
+411 -  Outed Teacher Ousted - random 4th
+488 - Bright Orange is the New Black - random 6th and 7th issue
+
+### Some Branching Issues
+
+70 - Purge the Infidels
+134 - The Truth Is Out There
+271 - Vigilantes: Heroes or Hoodlums
+274 - Brother Love - a Bit too close to home
+456 - Heads Will Roll
+472 - Rise of the machines
+
+982
+1030
+1270
+1358
+
+684 - Murder Most Deniable?
+
+180 - Mobile Maladies
+
+596 - Primogeniture Problems
+
+862
+
+1308
+
+1317
+
+527
 
 ---
 
-## Known Issues
-A select few issues may be wrong, this is because I am relying on multiple sources of truth to have their data correct, these being MWQ and the Valentine Z megathread. I manually fixed most of the problematic ones.
+The old version consisted of a lot of issues and required manual fixing due to some inconsistencies in ValentineZ's repo, which I forked and made corrections to. This fixed a vast majority and noted in `/val_z_error`, but can also be found in `old/`'s problem jsons.
 
-The recent changes to issues for athieism vs religiousness resulted in many changes to issues but I ignored most of them, as the choice variation still results in the same stat changes.
+The current errors are `errors.txt`, which are Brasilistan Go Boom (there are no effects) and a new issue.
 
 Some stats may be stale (miniscule amount tbh), as MWQ's mean stats change very often when new data points are entered and this is essentially a snapshot of MWQ.
-
-### Deliberate Issue Omissions: 
-Below list contains issues or choices that are ommited from stats because their sample size from mwq is too low. This is new, so some of the previous entries may be drawn from low sample results. When they hit enough I will revisit and add them. 
-1. 1577 (All About The Hustle)
-2. 1580 (Profitable for Doctrine)
-3. 1582 (Hospital Problems Ramping Up)
-4. 1583 (Spare the (Plutonium) Rod)
-5. 1585 (The Taste of Revenge)
-6. 1586 (Don't Point That Thing At Me)
-7. 1336 new option for nations that need licenses for parenting (Take Good Care of My Baby)
-
-Please file an issue if you run into any bugs, because there will be bugs.
 
 ---
 
@@ -46,29 +79,3 @@ Please file an issue if you run into any bugs, because there will be bugs.
 4. See your exact badge icons alongside the results and regenerate them if they are out of date with one click.
 
 ![Filter](/public/Filter.png)
-
----
-
-## Legality
-The script should be legal, it makes api calls with a user-agent client-side.
-
---- 
-
-## Contributing
-Contributions are welcome, especially to the json generation script. Just make a PR.
-
----
-
-### Dev Notes
-I care about the stats on a select few of my puppets, and I became tired of flipping through MWQ and NSIndex for issues to pick the right choice, sometimes even tanking stats because of mismatching the numbers and the actual issue choice. I then had the idea to make a TamperMonkey script that would inject MWQ results onto the issues page.
-
-Initially, this was to be an edge function route (mainly for personal use), and this was because of CORS, which would prevent me from getting both NSIndex and MWQ data. It would then scrape MWQ Issue results (a data repository by Trotterdam) and NSIndex (a now read-only wiki by Minoa), and would use the two to map the issue choices presented by a nation to the issue choices from NSIndex and effect lines and results from MWQ. This worked relatively well and can be seen in earlier commits and most of the current code is adjusted from this era.
-
-Sherpdawerp made me aware of an unfinished python script they made that would generate a json based off the issue megathread. I was aware of the issue megathread but it did not seem easy to map its large and inconsistently formatted issues to MWQ, but using their script as a springboard, I finished it and made it more robust to account for megathread edgecases and added the MWQ feature that was yet to be added. I then installed these jsons in place of NSIndex and MWQ and continued to use the edge solution. I added fastify around this time so people could potentially self host it.
-
-I then realized that since the only fetch calls left were to github's raw.githubusercontent.com domain and nationstates itself, I was probably not going to run into any cors, so there was no point in having any api route at all. I then merged all the function into the TamperMonkey script, and that is where it is today.
-
-Most of the core function is the same as when I was still scraping NSIndex and MWQ data, but this was an interesting journey and I have to thank Sherpdawerp for making me aware of their script.
-
-### To Do:
-Export local host stuff to local file so not all is lost after clearing browser data.

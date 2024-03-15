@@ -12,7 +12,6 @@ const filenames = readFileSync("repo_files.txt", "utf-8")
 export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
 let globalCount = 0;
 for (let filename of filenames) {
   const res = await fetch(`${BASE_REPO_URL}${filename}`);
@@ -24,19 +23,6 @@ for (let filename of filenames) {
     let [title, authorEditor] = splitIssue[0]
       .slice(splitIssue[0].indexOf(": ") + 2, splitIssue[0].indexOf("[/b]"))
       .split(" [");
-    // let [author, editor] = authorEditor ? authorEditor.split("ed:") : "";
-    // editor = editor
-    //   ? editor.trim().replace("]", "").replace(" and ", ", ").split(", ")
-    //   : "";
-    // author = author
-    //   ? author
-    //       .trim()
-    //       .replace("[", "")
-    //       .replace("]", "")
-    //       .replace(";", "")
-    //       .replace("& ", "")
-    //       .split(", ")
-    //   : "Max Barry";
     const interim = splitIssue[0].slice(
       0,
       splitIssue[0].lastIndexOf("[/anchor")
@@ -51,8 +37,6 @@ for (let filename of filenames) {
 
     const issueObject = {
       title: title,
-      // author: author,
-      // editor: editor,
       number: issueNum,
       options: [],
     };
@@ -80,49 +64,45 @@ for (let filename of filenames) {
         const leadsTo = [];
 
         resultFmt.forEach((result) => {
-            if (result.includes("policy") || result.includes("notability")) {
-              policiesAndNotabilities.push({
-                full: result,
-                qualifier: result.includes("sometimes")
-                  ? "sometimes"
-                  : "definitive",
-                behavior: result.includes("removes") ? "removes" : "adds",
-                type: result.includes("policy") ? "policy" : "notability",
-                name: result.split(": ")[1],
-              });
-            } else if (result.includes("leads to")) {
-              console.log("leads to");
-              leadsTo.push(result.split("#")[1]);
+          if (result.includes("policy") || result.includes("notability")) {
+            policiesAndNotabilities.push({
+              full: result,
+              qualifier: result.includes("sometimes")
+                ? "sometimes"
+                : "definitive",
+              behavior: result.includes("removes") ? "removes" : "adds",
+              type: result.includes("policy") ? "policy" : "notability",
+              name: result.split(": ")[1],
+            });
+          } else if (result.includes("leads to")) {
+            leadsTo.push(result.split("#")[1]);
+          } else {
+            let effects = {
+              min: 0,
+              max: 0,
+              mean: 0,
+              stat: "",
+            };
+            let [range, mean] = result.split(" (");
+            if (!range.includes(" to ")) {
+              let [effect, ...stat] = range.split(" ");
+              effects.max = Number(effect.trim().replace("+", ""));
+              effects.stat = stat.join(" ");
+              effects.mean = "";
             } else {
-              let effects = {
-                min: 0,
-                max: 0,
-                mean: 0,
-                stat: "",
-              };
-              let [range, mean] = result.split(" (");
-              if (!range.includes(" to ")) {
-                let [effect, ...stat] = range.split(" ");
-                effects.max = Number(effect.trim().replace("+", ""));
-                effects.stat = stat.join(" ");
-                effects.mean = "";
-              } else {
-                let [min, maxAndStat] = range.split(" to ");
-                effects.min = Number(min.trim().replace("+", ""));
-                let [max, ...stat] = maxAndStat.trim().split(" ");
-                effects.max = Number(max.trim().replace("+", ""));
-                effects.mean = mean
-                  ? Number(
-                      mean
-                        .replace("mean ", "")
-                        .replace(")", "")
-                        .replace("+", "")
-                    )
-                  : "";
-                effects.stat = stat.join(" ");
-              }
-              choiceEffects.push(effects);
+              let [min, maxAndStat] = range.split(" to ");
+              effects.min = Number(min.trim().replace("+", ""));
+              let [max, ...stat] = maxAndStat.trim().split(" ");
+              effects.max = Number(max.trim().replace("+", ""));
+              effects.mean = mean
+                ? Number(
+                    mean.replace("mean ", "").replace(")", "").replace("+", "")
+                  )
+                : "";
+              effects.stat = stat.join(" ");
             }
+            choiceEffects.push(effects);
+          }
         });
 
         if (issueObject.options[index - 1]) {
