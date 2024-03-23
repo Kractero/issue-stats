@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Issue Stat Getter
 // @namespace    Kra
-// @version      2.0
+// @version      2.1
 // @description  Get issues results shown to you.
 // @author       Kractero
 // @match        https://www.nationstates.net/page=show_dilemma/dilemma=*
@@ -130,8 +130,8 @@ function levenshteinDistance(str1, str2) {
     const map = Array.from(scaleElements).reduce((acc, scaleElement) => {
       const id = scaleElement.getAttribute('id');
       const prank = parseInt(scaleElement.querySelector('PRANK').textContent);
-      const censusEntry = census.find(item => item[0] === id);
-      if (censusEntry && prank) {
+      const censusEntry = census.find(item => Number(item[0]) === Number(id));
+      if (censusEntry && !isNaN(prank)) {
           const [scaleName, scaleType] = censusEntry.slice(1);
           let img = `/images/trophies/${scaleType}-1.png`;
           if (prank > 1) img = `/images/trophies/${scaleType}-5.png`;
