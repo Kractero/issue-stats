@@ -1,9 +1,9 @@
 {
-  "title": "The Space Between",
+  "title": "Border Burden",
   "number": "1622",
   "options": [
     {
-      "text": "\"It's just not practical,\" gripes @@RANDOM_NAME@@, the head of @@NAME_INITIALS@@SA, who reeks of something nasty. \"We put together these multi-billion @@CURRENCY@@ missions, and when they're over, we collect the shuttle with horse-drawn carriages. With luck, we can drag it to an existing rail system or port, but if not, we drag the whole damn thing back by buggy! If we're really committed to our space program, we need to reconsider the ban on automobiles and aeroplanes — surely we can at least make an exception for an essential government program like this. It's about time we get off our high horses and start thinking of the places we could go!\"",
+      "text": "The messenger bearing the letter bows deeply, and presents the document for your perusal. It reads, “@@LEADER@@, these pene-exclaves negatively affect the lives of both our nations’ citizens, who often have to deal with border crossings and bureaucracy to fulfill their basic needs. They also cost a fortune to administer. On behalf of my nation, I propose we exchange these lands so that there will no longer be territories that can only be accessed by crossing a border. The affected citizens of each nation can then choose between moving to a new location in their home country, or beginning the citizenship process where they are.”",
       "result": "@@LEADER@@ reduces citizens' commute times by giving away their homes",
       "choiceEffects": [
         {
@@ -401,7 +401,7 @@
       "leadsTo": []
     },
     {
-      "text": "\"Hold on, we can get creative here,\" interjects Xenon Trust, the eccentric CEO of spacecraft developer StarY, confidently striding in wearing a jetpack that looks like something your niece made for her fifth birthday. \"Taking things places with... minimal explosiveness... is the literal mission of spacecraft. When we shoot for the Moon, we should be able to land back safely and precisely where we want in @@NAME@@! Listen — my company has pioneered very well-tested, proprietary rocket tech that'll give your vessels the ability to safely re-enter orbit and land anywhere without the usual rough landings. Pair that with my smart, ambitious, and very expansive project to place landing sites in safe zones all over the country and we won't have to worry about future catastrophes!\"",
+      "text": "“Do we even care about these lands?” questions avaricious Minister of the Economy @@RANDOM_NAME@@, pointing at a map with scorn. “Only a few thousand @@DEMONYM_PLURAL@@ live there, yet we pay the high price of having to provide services. Did you know that their annual per capita tax revenue is only half the national average? If Bigtopia wants these areas, let it buy them off us and take care of the residents themselves, along with the ones in their own exclaves! We get a bit of cash, and it’ll allow the use of taxpayer money for better purposes, like lining our pockets... err, I mean focusing on the more prosperous parts of the country.”",
       "result": "the government runs a surplus by selling its citizens",
       "choiceEffects": [
         {
@@ -759,7 +759,7 @@
       "leadsTo": []
     },
     {
-      "text": "\"Hold on, we can get creative here,\" interjects Xenon Trust, the eccentric CEO of spacecraft developer StarY, confidently striding in wearing a jetpack that looks like something your niece made for her fifth birthday. \"Taking things places with... minimal explosiveness... is the literal mission of spacecraft. When we shoot for the Moon, we should be able to land back safely and precisely where we want in @@NAME@@! Listen — my company has pioneered well-tested, proprietary rocket tech that'll give your vessels the ability to safely re-enter orbit and land anywhere without the usual rough landings. Pair that with my smart, ambitious, and very expansive project to place landing sites in safe zones all over the country and we won't have to worry about catastrophes like the one in Cape @@NAME@@!\"",
+      "text": "“Are you insane? Think about our citizens!” cries @@RANDOM_NAME@@, your Minister of Foreign Affairs, who passed through three border checkpoints on the way to work today. “They’d have to give up their ancestral land in order to stay with us, or else suddenly wake up in a different country! Why don’t we just sign a mutual free border agreement with Bigtopia? If you live in an exclave, you’ll be able to travel without a visa to and from the mainland, and services such as the fire and police departments would be allowed to cross the border too. I’m sure we can trust that their citizens won’t exploit this to gain access to other parts of @@NAME@@.” @@HE@@ shakes the hand of the Bigtopian messenger, and quietly dismisses them.",
       "result": "one can wake up in @@NAME@@ and have breakfast in Bigtopia",
       "choiceEffects": [
         {
@@ -1184,7 +1184,7 @@
       "leadsTo": []
     },
     {
-      "text": "\"What is with you people and insane solutions?\" shrieks @@RANDOM_NAME@@, a flustered parent attempting to hold onto six grocery bags, two children, and a set of horse reins. \"Life has been absolute H-E-Double-Hockey-Sticks since the ban! Excuse my language, but do you realize how ridiculously hard it is to get four kids to and from school, take two dogs, a cat, and an irate ferret to the vet, and visit your miserable, good-for-nothing extended family on Maxxmas, all without a car or a plane? And now you're telling me I have to watch out for this crackpot's exploding ships every morning too? We ought to land all our stuff in other countries, and with a practical approach to transportation policy like unbanning cars and planes we can grab it all easily and go home happy — oh, Tommy, get back here!\"",
+      "text": "“Is that Bigtopian rascal gone yet? Splendid! The elephant in the room is that we allow a weak nation like Bigtopia to push us around!” scoffs Minister of War @@RANDOM_NAME@@, tearing the letter and throwing it in the trash. “Why would we want to sign deals with them or sell our land? A far easier solution would be to intimidate Bigtopia into ceding the travel corridors we want! Run a series of military exercises along the borders where @@DEMONYM_PLURAL@@ need to cross, and inform those big-noses that we need freedom to move our troops back and forth to the exclaves for our own national security. See if we can get control of their exclaves too, to smooth this mess of a border.”",
       "result": "the nation has declared its intention to \"stretch out\"",
       "choiceEffects": [
         {
@@ -1456,12 +1456,6 @@
         }
       ],
       "leadsTo": []
-    },
-    {
-      "text": "\"What is with you people and insane solutions?\" shrieks @@RANDOM_NAME@@, a flustered parent attempting to hold onto six grocery bags, two children, and a set of horse reins. \"Life has been absolute H-E-Double-Hockey-Sticks since the ban! Excuse my language, but do you realize how ridiculously hard it is to get four kids to and from school, take two dogs, a cat, and an irate ferret to the vet, and visit your miserable, good-for-nothing extended family on Maxxmas, all without a car or a plane? The last bit isn't much of a problem since you landed the Maxcelsior on top of their house, but that's a whole new mess, isn't it? We ought to land all our stuff in other countries, and with a practical approach to transportation policy like unbanning cars and planes we can grab it all easily and go home happy — oh, Tommy, get back here!\""
-    },
-    {
-      "text": "\"Woah, woah, woah, we still have a space program?\" exclaims infamous anti-emissions protester @@RANDOM_NAME@@, who has finally returned from a demonstration in @@ANIMAL@@ City after a 72-day-long trek. \"Those gas-spewing satellites and rockets need to go the way of the plane, car, and dodo. If they emit exhaust, they gotta go. We've come this far; one more tiny push and we can be the most environmentally friendly nation in @@REGION@@! Imagine that, right? So what if people have to walk everywhere? Everyone needs to slow down and take in the beauty anyway.\""
     }
   ]
 }
