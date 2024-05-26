@@ -2,7 +2,8 @@
 
 My TamperMonkey script that gets issue stats and puts them on your issues page, built from joining ValentineZ's issue github repository data with the MWQ issue effects database.
 
-Last updated with MWQ data: `2024-03-14`
+Last fully updated with MWQ data: `2024-03-14`
+Last updated with new issues and old issues from 1620-1628: `2024-05-26`
 
 ## Usage
 [Add the script](https://github.com/Kractero/issue-stats/raw/main/issueStatGetter.user.js) to Tampermonkey.
