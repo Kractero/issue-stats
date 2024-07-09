@@ -123,7 +123,7 @@ for (let filename of filenames) {
     });
 
     writeFileSync(
-      `issues/${issueObject.num}.json`,
+      `issues/${issueObject.number}.json`,
       JSON.stringify(issueObject, null, 2)
     );
     await sleep(1400);
