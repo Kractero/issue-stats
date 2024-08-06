@@ -171,7 +171,6 @@ function levenshteinDistance(str1, str2) {
     `;
   document.getElementsByTagName("head")[0].appendChild(stylesheet);
 
-  const id = window.location.href.replace('https://www.nationstates.net/page=show_dilemma/dilemma=', '');
   const nation = document.querySelector('.bannernation2') ? document.querySelector('.bannernation2').innerText : document.querySelector('#loggedin').getAttribute('data-nname');
   const choices = document.querySelectorAll('.diloptions li p:first-child');
   const filterSpot = document.querySelector('.dilemma');
@@ -276,7 +275,7 @@ function levenshteinDistance(str1, str2) {
   const getSubList = await fetch(`https://raw.githubusercontent.com/Kractero/issue-stats/master/issues/${num}.json`);
   const issue = await getSubList.json();
   const bestMatchArray = choicesObject.map((option) => {
-    option = option.replace(/“|”/g, '"');
+    option = option.replace(/“|”/g, '"').replace(/’/g, "'");
     let bestMatchNum = 0;
     let bestScore = 0;
 
