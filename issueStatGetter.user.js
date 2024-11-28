@@ -1,14 +1,40 @@
 // ==UserScript==
 // @name         Issue Stat Getter
 // @namespace    Kra
-// @version      2.2
+// @version      2.3
 // @description  Get issues results shown to you.
 // @author       Kractero
 // @match        https://www.nationstates.net/page=show_dilemma/dilemma=*
 // @downloadURL  https://raw.githubusercontent.com/Kractero/issue-stats/main/issueStatGetter.user.js
 // @updateURL    https://raw.githubusercontent.com/Kractero/issue-stats/main/issueStatGetter.user.js
-// @grant        none
+// @grant        GM.getValue
+// @grant        GM.setValue
+// @grant        GM.deleteValue
 // ==/UserScript==
+
+async function migrateData() {
+  const badges = localStorage.getItem('badges')
+  if (badges) {
+    await GM.setValue('badges', JSON.parse(badges))
+  }
+
+  const uncheckedValues = localStorage.getItem('uncheckedValues')
+  if (uncheckedValues) {
+    await GM.setValue('uncheckedValues', JSON.parse(uncheckedValues))
+  }
+
+  const showNonStats = localStorage.getItem('showNonStats')
+  if (showNonStats) {
+    await GM.setValue('showNonStats', showNonStats === 'true')
+  }
+
+  localStorage.setItem('migrationDone', 'true')
+}
+
+const migrationDone = localStorage.getItem('migrationDone')
+if (!migrationDone) {
+  migrateData()
+}
 
 function levenshteinDistance(str1, str2) {
   const m = str1.length
@@ -180,8 +206,8 @@ function levenshteinDistance(str1, str2) {
     : document.querySelector('#loggedin').getAttribute('data-nname')
   const choices = document.querySelectorAll('.diloptions li p:first-child')
   const filterSpot = document.querySelector('.dilemma')
-  const shownValues = JSON.parse(localStorage.getItem('uncheckedValues') ?? '{}')
-  const showNonStats = localStorage.getItem('showNonStats') === 'false' ? false : true
+  const shownValues = await GM.getValue('uncheckedValues', {})
+  const showNonStats = await GM.getValue('showNonStats', true)
   const checkboxes = document.createElement('div')
   const buttonLabels = [
     'Filter Categories',
@@ -228,10 +254,10 @@ function levenshteinDistance(str1, str2) {
     })
   })
 
-  gatherBadges.addEventListener('click', () => {
-    let badges = JSON.parse(localStorage.getItem('badges') || '{}')
+  gatherBadges.addEventListener('click', async () => {
+    let badges = await GM.getValue('badges', {})
     delete badges[nation]
-    localStorage.setItem('badges', JSON.stringify(badges))
+    await GM.setValue('badges', badges)
     location.reload()
   })
 
@@ -248,15 +274,16 @@ function levenshteinDistance(str1, str2) {
     }
   }
 
-  function figureOutCheckStatus() {
+  async function figureOutCheckStatus() {
     const checkboxers = checkboxes.getElementsByTagName('input')
     const uncheckedCheckboxes = Array.from(checkboxers).filter(cb => cb.checked)
     const uncheckedValues = Array.from(uncheckedCheckboxes, cb => cb.name)
 
-    let currUncheckedObj = JSON.parse(localStorage.getItem('uncheckedValues')) || {}
+    let currUncheckedObj = await GM.getValue('uncheckedValues', {})
+
     currUncheckedObj[nation] = uncheckedValues
 
-    localStorage.setItem('uncheckedValues', JSON.stringify(currUncheckedObj))
+    await GM.setValue('uncheckedValues', currUncheckedObj)
 
     Array.from(filterSpot.querySelectorAll('.effect-selector')).forEach(effect => {
       effect.classList.toggle(
@@ -309,10 +336,10 @@ function levenshteinDistance(str1, str2) {
     toggleUnranked
   )
 
-  let badges = JSON.parse(localStorage.getItem('badges') || '{}')
+  let badges = await GM.getValue('badges', {})
   if (!badges[nation] || Object.keys(badges[nation]).length === 0) {
     badges[nation] = await getBadgeMap(nation)
-    localStorage.setItem('badges', JSON.stringify(badges))
+    await GM.setValue('badges', badges)
   }
   const choicesObject = Array.from(choices).map(choice => choice.textContent.trim())
 
@@ -340,10 +367,13 @@ function levenshteinDistance(str1, str2) {
     })
 
     issue.options[bestMatchNum].choiceEffects.sort((a, b) => {
-      const aValue = parseInt(a.image.match(/-(\d+)\.png$/)[1])
-      if (b.image) {
-        const bValue = parseInt(b.image.match(/-(\d+)\.png$/)[1])
-        return aValue - bValue
+      let aValue = a
+      if (aValue.image) {
+        aValue = parseInt(a.image.match(/-(\d+)\.png$/)[1])
+        if (b.image) {
+          const bValue = parseInt(b.image.match(/-(\d+)\.png$/)[1])
+          return aValue - bValue
+        }
       }
       return aValue
     })
@@ -354,8 +384,8 @@ function levenshteinDistance(str1, str2) {
     }
   })
 
-  function toggleBadgeCheckboxes(suffix) {
-    let badges = JSON.parse(localStorage.getItem('badges') || '{}')
+  async function toggleBadgeCheckboxes(suffix) {
+    let badges = await GM.getValue('badges', {})
     if (badges[nation]) {
       const matchingKeys = Object.keys(badges[nation]).filter(key => badges[nation][key].endsWith(suffix))
       const checkboxList = checkboxes.querySelectorAll('input[type="checkbox"]')
@@ -372,7 +402,7 @@ function levenshteinDistance(str1, str2) {
 
   const approves = document.querySelectorAll('.diloptions li')
 
-  approves.forEach((option, index) => {
+  for (let i = 0; i < approves.length; i++) {
     const fatherDiv = document.createElement('div')
     const policyDiv = document.createElement('div')
     policyDiv.classList.add('notstats')
@@ -380,20 +410,20 @@ function levenshteinDistance(str1, str2) {
       policyDiv.classList.add('hidden')
     }
     fatherDiv.classList.add('effect-div')
-    if (!bestMatchArray[index]) {
+    if (!bestMatchArray[i]) {
       const probableBug = document.createElement('p')
       probableBug.textContent = 'No census effects in the JSON, probable bug!'
       probableBug.style.margin = '0'
       badDiv.appendChild(probableBug)
     }
 
-    bestMatchArray[index].policiesAndNotabilities.map(policies => {
+    bestMatchArray[i].policiesAndNotabilities.map(policies => {
       const policy = document.createElement('p')
       policy.textContent = policies.full
       policyDiv.append(policy)
     })
 
-    bestMatchArray[index].leadsTo.map(lead => {
+    bestMatchArray[i].leadsTo.map(lead => {
       const policy = document.createElement('p')
       policy.textContent = `Leads to #${lead}`
       policyDiv.append(policy)
@@ -402,9 +432,9 @@ function levenshteinDistance(str1, str2) {
     const goodDiv = document.createElement('div')
     const badDiv = document.createElement('div')
 
-    let showValues = localStorage.getItem('uncheckedValues')
+    let showValues = await GM.getValue('uncheckedValues', null)
 
-    bestMatchArray[index].choiceEffects.forEach(item => {
+    bestMatchArray[i].choiceEffects.forEach(item => {
       const effectDiv = document.createElement('div')
       const average = document.createElement('p')
       average.textContent = `${item.min} to ${item.max > 0 ? `+${item.max}` : item.max} ${item.stat} ${
@@ -420,8 +450,8 @@ function levenshteinDistance(str1, str2) {
       effectDiv.style.color = item.mean < 0 ? 'red' : 'green'
       item.mean < 0 ? badDiv.appendChild(effectDiv) : goodDiv.appendChild(effectDiv)
 
-      if (showValues && JSON.parse(showValues)[nation]) {
-        const shownValues = JSON.parse(showValues)[nation]
+      if (showValues && showValues[nation]) {
+        const shownValues = showValues[nation]
         effectDiv.classList.toggle(
           'effect',
           shownValues.some(value => value === item.stat)
@@ -429,12 +459,12 @@ function levenshteinDistance(str1, str2) {
       }
     })
     fatherDiv.append(goodDiv, badDiv)
-    option.appendChild(policyDiv)
-    option.appendChild(fatherDiv)
-  })
+    approves[i].appendChild(policyDiv)
+    approves[i].appendChild(fatherDiv)
+  }
 
-  hideNotStats.addEventListener('click', () => {
+  hideNotStats.addEventListener('click', async () => {
     document.querySelector('.notstats').classList.toggle('hidden')
-    localStorage.setItem('showNonStats', !showNonStats)
+    await GM.setValue('showNonStats', !showNonStats)
   })
 })()
