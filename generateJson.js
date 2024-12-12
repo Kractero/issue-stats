@@ -13,7 +13,16 @@ export function sleep(ms) {
 let globalCount = 0
 for (let filename of filenames) {
   const file = readFileSync(`./issue-megalist/${filename}`, 'utf-8')
-  const textWithoutCarriageReturn = file.split('\r').join('').trim()
+  const textWithoutCarriageReturn = file
+    .split('\r')
+    .join('')
+    .trim()
+    .replace(/”|’|“/g, match => {
+      if (match === '”') return '"'
+      if (match === '’') return "'"
+      if (match === '“') return ''
+      return match
+    })
   const issues = textWithoutCarriageReturn.split(/\n-{4,}\s*\n/)
   for (let i = 0; i < issues.length; i++) {
     const splitIssue = issues[i].split('\n')
@@ -41,6 +50,16 @@ for (let filename of filenames) {
     const document = parse(effectsText)
     const effectLines = document.querySelectorAll('tr td:first-child')
     const results = document.querySelectorAll('tr td:nth-child(2)')
+    const points = Array.from(document.querySelectorAll('tr'))
+      .map(tr => {
+        const td = tr.querySelector('td:nth-child(3)')
+        if (td) {
+          const div = td.querySelector('div')
+          return div ? div.innerHTML.trim() : null
+        }
+        return null
+      })
+      .filter(value => value !== null && !isNaN(value) && value !== '')
 
     Array.from(effectLines).forEach((line, i) => {
       const result = results[i]
@@ -94,12 +113,14 @@ for (let filename of filenames) {
           issueObject.options[index - 1].choiceEffects = choiceEffects
           issueObject.options[index - 1].policiesAndNotabilities = policiesAndNotabilities
           issueObject.options[index - 1].leadsTo = leadsTo
+          issueObject.options[index - 1].dataPoints = points[i]
         } else {
           issueObject.options.push({
             result: value,
             choiceEffects: choiceEffects,
             policiesAndNotabilities: policiesAndNotabilities,
             leadsTo: leadsTo,
+            dataPoints: points[i],
           })
         }
       })
