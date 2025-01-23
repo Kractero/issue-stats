@@ -7,9 +7,15 @@
       "result": "wars of expansion are described as \"peacekeeping operations\"",
       "choiceEffects": [
         {
-          "min": 0,
+          "min": -1.67,
+          "max": 0.5,
+          "mean": -0.0004,
+          "stat": "Civil Rights"
+        },
+        {
+          "min": -0.02,
           "max": 0.44,
-          "mean": 0.0002,
+          "mean": 0.0001,
           "stat": "Economy"
         },
         {
@@ -19,273 +25,285 @@
           "stat": "Political Freedom"
         },
         {
-          "min": 0,
+          "min": -0.01,
           "max": 7.22,
-          "mean": 0.0025,
+          "mean": 0.0024,
           "stat": "Wealth Gaps"
         },
         {
           "min": -0.5,
-          "max": 0.22,
-          "mean": -0.0034,
+          "max": 2.34,
+          "mean": -0.0025,
           "stat": "Death Rate"
         },
         {
           "min": -0.56,
-          "max": 0,
-          "mean": -0.0002,
+          "max": 0.44,
+          "mean": -0.0001,
           "stat": "Compassion"
         },
         {
           "min": -188,
-          "max": 5.06,
-          "mean": -0.6134,
+          "max": 26.29,
+          "mean": -0.6007,
           "stat": "Eco-Friendliness"
         },
         {
-          "min": -9.82,
+          "min": -0.5,
+          "max": 1.25,
+          "mean": 0.0002,
+          "stat": "Social Conservatism"
+        },
+        {
+          "min": -0.25,
+          "max": 0,
+          "mean": -0.0001,
+          "stat": "Nudity"
+        },
+        {
+          "min": -106.05,
           "max": 14.29,
-          "mean": -0.3035,
+          "mean": -0.338,
           "stat": "Industry: Automobile Manufacturing"
         },
         {
           "min": -205.49,
           "max": 299.1,
-          "mean": -0.3591,
+          "mean": -0.3636,
           "stat": "Industry: Cheese Exports"
         },
         {
           "min": -63.12,
-          "max": 10.4,
-          "mean": -0.6739,
+          "max": 267.2,
+          "mean": -0.5589,
           "stat": "Industry: Basket Weaving"
         },
         {
-          "min": -25.04,
+          "min": -248.06,
           "max": 75.4,
-          "mean": -1.5829,
+          "mean": -1.7056,
           "stat": "Industry: Information Technology"
         },
         {
-          "min": -38.09,
+          "min": -515.67,
           "max": 9.45,
-          "mean": -0.2317,
+          "mean": -0.4153,
           "stat": "Industry: Pizza Delivery"
         },
         {
-          "min": -40.35,
+          "min": -47.96,
           "max": 1194.45,
-          "mean": -0.4669,
+          "mean": -0.4938,
           "stat": "Industry: Trout Fishing"
         },
         {
-          "min": -47.44,
-          "max": 375.62,
-          "mean": -1.7518,
+          "min": -73.67,
+          "max": 1653.6,
+          "mean": -1.2461,
           "stat": "Industry: Arms Manufacturing"
         },
         {
-          "min": -8.43,
+          "min": -130.02,
           "max": 20.75,
-          "mean": -0.561,
+          "mean": -0.6419,
           "stat": "Sector: Agriculture"
         },
         {
-          "min": -7.71,
+          "min": -244.45,
           "max": 27.9,
-          "mean": -0.0842,
+          "mean": -0.1757,
           "stat": "Industry: Beverage Sales"
         },
         {
           "min": -16.73,
           "max": 18.46,
-          "mean": -0.4599,
+          "mean": -0.4675,
           "stat": "Industry: Timber Woodchipping"
         },
         {
-          "min": -11.74,
+          "min": -174.1,
           "max": 25.41,
-          "mean": -0.7048,
+          "mean": -0.8121,
           "stat": "Industry: Mining"
         },
         {
-          "min": -5.93,
+          "min": -266.54,
           "max": 13.12,
-          "mean": -0.3223,
+          "mean": -0.415,
           "stat": "Industry: Insurance"
         },
         {
-          "min": -7.29,
-          "max": 15.46,
-          "mean": -0.4302,
+          "min": -120.33,
+          "max": 17.22,
+          "mean": -0.4701,
           "stat": "Industry: Furniture Restoration"
         },
         {
-          "min": -22.7,
+          "min": -128.87,
           "max": 47.35,
-          "mean": -0.5311,
+          "mean": -0.5847,
           "stat": "Industry: Retail"
         },
         {
-          "min": -19.87,
+          "min": -55.55,
           "max": 157.38,
-          "mean": -0.6921,
+          "mean": -0.6806,
           "stat": "Industry: Book Publishing"
         },
         {
-          "min": -11.83,
+          "min": -347.87,
           "max": 105.29,
-          "mean": -0.0961,
+          "mean": -0.1877,
           "stat": "Industry: Gambling"
         },
         {
-          "min": -49.28,
-          "max": 312.5,
-          "mean": -2.7292,
+          "min": -106.05,
+          "max": 1653.6,
+          "mean": -2.1425,
           "stat": "Sector: Manufacturing"
         },
         {
-          "min": -0.04,
-          "max": 0.18,
-          "mean": 0.0221,
+          "min": -0.05,
+          "max": 0.43,
+          "mean": 0.0223,
           "stat": "Government Size"
         },
         {
           "min": -13.07,
-          "max": 4.39,
-          "mean": -0.5516,
+          "max": 15.46,
+          "mean": -0.5459,
           "stat": "Welfare"
         },
         {
           "min": -9.46,
-          "max": 5.8,
-          "mean": -0.8496,
+          "max": 49.49,
+          "mean": -0.8328,
           "stat": "Public Healthcare"
         },
         {
           "min": -17.46,
           "max": 514.35,
-          "mean": -1.0867,
+          "mean": -1.0466,
           "stat": "Law Enforcement"
         },
         {
           "min": -15.13,
-          "max": 39.25,
-          "mean": -0.8527,
+          "max": 85.06,
+          "mean": -0.8262,
           "stat": "Business Subsidization"
         },
         {
           "min": 0,
           "max": 126.41,
-          "mean": 0.0441,
+          "mean": 0.0421,
           "stat": "Religiousness"
         },
         {
-          "min": -0.08,
-          "max": 0,
-          "mean": 0,
+          "min": -0.6,
+          "max": 0.38,
+          "mean": -0.0001,
           "stat": "Income Equality"
         },
         {
-          "min": -0.02,
-          "max": 0,
+          "min": -0.17,
+          "max": 0.31,
           "mean": 0,
           "stat": "Niceness"
         },
         {
-          "min": -0.09,
+          "min": -0.22,
           "max": 1.27,
-          "mean": 0.0004,
+          "mean": 0.0005,
           "stat": "Rudeness"
         },
         {
-          "min": -0.04,
+          "min": -1.27,
           "max": 0.44,
-          "mean": 0.0002,
+          "mean": -0.0002,
           "stat": "Intelligence"
         },
         {
           "min": -0.08,
-          "max": 0.03,
-          "mean": 0,
+          "max": 1.05,
+          "mean": 0.0003,
           "stat": "Ignorance"
         },
         {
           "min": -5,
-          "max": 0,
-          "mean": -0.0021,
+          "max": 1,
+          "mean": -0.002,
           "stat": "Weather"
         },
         {
           "min": -0.12,
           "max": 1.28,
-          "mean": 0.0005,
+          "mean": 0.0006,
           "stat": "Compliance"
         },
         {
-          "min": -0.67,
+          "min": -0.8,
           "max": 1.41,
-          "mean": 0.0003,
+          "mean": 0.0004,
           "stat": "Safety"
         },
         {
-          "min": -0.12,
+          "min": -0.77,
           "max": 0.08,
-          "mean": 0.0006,
+          "mean": 0.0004,
           "stat": "Lifespan"
         },
         {
-          "min": 0,
+          "min": -0.37,
           "max": 0.44,
           "mean": 0.0002,
           "stat": "Ideological Radicality"
         },
         {
-          "min": 0,
-          "max": 158.38,
-          "mean": 65.9273,
+          "min": -151.83,
+          "max": 812.9,
+          "mean": 66.1513,
           "stat": "Defense Forces"
         },
         {
-          "min": -0.98,
-          "max": 0.62,
-          "mean": -0.2644,
+          "min": -20.07,
+          "max": 0.89,
+          "mean": -0.2697,
           "stat": "Pacifism"
         },
         {
-          "min": 0,
+          "min": -0.5,
           "max": 1.34,
-          "mean": 0.0005,
+          "mean": 0.0006,
           "stat": "Economic Freedom"
         },
         {
-          "min": 0,
-          "max": 1.07,
-          "mean": 0.0833,
+          "min": -0.15,
+          "max": 2.13,
+          "mean": 0.0838,
           "stat": "Taxation"
         },
         {
-          "min": -2.33,
-          "max": 0.05,
-          "mean": -0.3334,
+          "min": -3.96,
+          "max": 0.87,
+          "mean": -0.3343,
           "stat": "Freedom From Taxation"
         },
         {
-          "min": 0,
-          "max": 0.08,
-          "mean": 0,
+          "min": -0.44,
+          "max": 0.54,
+          "mean": 0.0002,
           "stat": "Corruption"
         },
         {
-          "min": -0.01,
-          "max": 0,
-          "mean": 0,
+          "min": -0.2,
+          "max": 0.04,
+          "mean": -0.0001,
           "stat": "Integrity"
         },
         {
-          "min": -10.29,
-          "max": 9.82,
-          "mean": -0.0002,
+          "min": -72.94,
+          "max": 42.99,
+          "mean": -0.0109,
           "stat": "Authoritarianism"
         },
         {
@@ -302,20 +320,20 @@
         },
         {
           "min": -0.46,
-          "max": 0.17,
-          "mean": -0.0134,
+          "max": 0.45,
+          "mean": -0.0131,
           "stat": "Employment"
         },
         {
           "min": -8.25,
-          "max": 12.24,
-          "mean": -0.4524,
+          "max": 21.65,
+          "mean": -0.4461,
           "stat": "Public Transport"
         },
         {
           "min": -57.6,
           "max": 22.71,
-          "mean": -0.0074,
+          "mean": -0.003,
           "stat": "Tourism"
         },
         {
@@ -326,14 +344,14 @@
         },
         {
           "min": -0.38,
-          "max": 0,
-          "mean": -0.0002,
+          "max": 14.3,
+          "mean": 0.0045,
           "stat": "Recreational Drug Use"
         },
         {
           "min": -0.01,
-          "max": 0.03,
-          "mean": 0,
+          "max": 0.22,
+          "mean": 0.0001,
           "stat": "Obesity"
         },
         {
@@ -344,56 +362,56 @@
         },
         {
           "min": -42.14,
-          "max": 0,
-          "mean": -0.0147,
+          "max": 1.98,
+          "mean": -0.0129,
           "stat": "Environmental Beauty"
         },
         {
           "min": -0.07,
-          "max": 0.23,
-          "mean": 0,
+          "max": 3.51,
+          "mean": 0.0015,
           "stat": "Charmlessness"
         },
         {
           "min": -0.44,
-          "max": 0,
+          "max": 0.37,
           "mean": -0.0002,
           "stat": "Averageness"
         },
         {
-          "min": -0.02,
+          "min": -0.42,
           "max": 0.18,
-          "mean": 0.0003,
+          "mean": 0.0001,
           "stat": "Human Development Index"
         },
         {
-          "min": -1.34,
-          "max": 0.47,
-          "mean": -0.0003,
+          "min": -1.59,
+          "max": 3.37,
+          "mean": 0.0013,
           "stat": "Primitiveness"
         },
         {
-          "min": 0,
+          "min": -2.72,
           "max": 0.82,
-          "mean": 0.0003,
+          "mean": -0.001,
           "stat": "Scientific Advancement"
         },
         {
           "min": -572.47,
           "max": 394.43,
-          "mean": 46.2204,
+          "mean": 46.1764,
           "stat": "Average Income"
         },
         {
-          "min": -337.12,
+          "min": -770.27,
           "max": 245.72,
-          "mean": 22.7064,
+          "mean": 22.4213,
           "stat": "Average Income of Poor"
         },
         {
-          "min": 0,
+          "min": -811,
           "max": 6811,
-          "mean": 129.5576,
+          "mean": 129.2246,
           "stat": "Average Income of Rich"
         },
         {
@@ -403,33 +421,33 @@
           "stat": "Public Education"
         },
         {
-          "min": -0.04,
+          "min": -0.05,
           "max": 0.2,
           "mean": 0,
           "stat": "Crime"
         },
         {
           "min": -6.88,
-          "max": 1.06,
-          "mean": -0.1701,
+          "max": 3.09,
+          "mean": -0.1694,
           "stat": "Foreign Aid"
         },
         {
-          "min": -725.2,
-          "max": 60.93,
-          "mean": -76.3533,
+          "min": -1040.36,
+          "max": 151.64,
+          "mean": -76.5961,
           "stat": "Average Disposable Income"
         },
         {
           "min": 0,
-          "max": 3.52,
-          "mean": 0.8916,
+          "max": 6.74,
+          "mean": 0.8914,
           "stat": "Patriotism"
         },
         {
           "min": -0.53,
-          "max": 0.42,
-          "mean": 0,
+          "max": 1.36,
+          "mean": 0.0006,
           "stat": "Food Quality"
         }
       ],
@@ -442,208 +460,281 @@
           "name": "punitive income tax rates"
         }
       ],
-      "leadsTo": []
+      "leadsTo": [],
+      "dataPoints": "3001"
     },
     {
       "text": "\"Maybe we should instead be trying to make ourselves worthy of the prize?\" suggests your niece, symbolically swatting at the military officer with an olive branch. \"Bring overseas troops home, honourably discharge them from service and begin a process of demilitarisation. Like I always say to my mum, there's no need to be so hostile.\"",
       "result": "stern tutting by international commentators has persuaded @@NAME@@ to disarm",
       "choiceEffects": [
         {
+          "min": 0,
+          "max": 0.06,
+          "mean": 0.0001,
+          "stat": "Economy"
+        },
+        {
+          "min": 0,
+          "max": 0.05,
+          "mean": 0.0001,
+          "stat": "Wealth Gaps"
+        },
+        {
           "min": -9.27,
           "max": 1.29,
-          "mean": -0.0345,
+          "mean": -0.0367,
           "stat": "Death Rate"
         },
         {
           "min": -3.39,
           "max": 172.38,
-          "mean": 21.9826,
+          "mean": 22.204,
           "stat": "Eco-Friendliness"
         },
         {
           "min": 0,
           "max": 221.16,
-          "mean": 10.5553,
+          "mean": 10.7587,
           "stat": "Industry: Automobile Manufacturing"
         },
         {
           "min": -5.43,
           "max": 147.41,
-          "mean": 12.2506,
+          "mean": 12.2666,
           "stat": "Industry: Cheese Exports"
         },
         {
           "min": -1.19,
           "max": 410.04,
-          "mean": 37.0034,
+          "mean": 36.3766,
           "stat": "Industry: Basket Weaving"
         },
         {
           "min": -35.39,
           "max": 379.59,
-          "mean": 57.1019,
+          "mean": 57.4351,
           "stat": "Industry: Information Technology"
         },
         {
           "min": -5.82,
           "max": 525.18,
-          "mean": 28.9674,
+          "mean": 28.8457,
           "stat": "Industry: Pizza Delivery"
         },
         {
           "min": 0,
           "max": 481.83,
-          "mean": 17.7101,
+          "mean": 16.8621,
           "stat": "Industry: Trout Fishing"
         },
         {
           "min": -4004.9,
-          "max": -0.32,
-          "mean": -1502.7184,
+          "max": 0,
+          "mean": -1512.0412,
           "stat": "Industry: Arms Manufacturing"
         },
         {
           "min": -2.5,
           "max": 286.11,
-          "mean": 20.3869,
+          "mean": 19.9228,
           "stat": "Sector: Agriculture"
         },
         {
           "min": -10.49,
           "max": 253.17,
-          "mean": 19.3462,
+          "mean": 19.612,
           "stat": "Industry: Beverage Sales"
         },
         {
           "min": -2.35,
           "max": 258.24,
-          "mean": 32.9587,
+          "mean": 33.7449,
           "stat": "Industry: Timber Woodchipping"
         },
         {
           "min": -2.9,
           "max": 459.94,
-          "mean": 59.5799,
+          "mean": 60.3983,
           "stat": "Industry: Mining"
         },
         {
           "min": -2.05,
           "max": 141.14,
-          "mean": 8.2075,
+          "mean": 7.9296,
           "stat": "Industry: Insurance"
         },
         {
           "min": -2.24,
           "max": 174.7,
-          "mean": 21.7962,
+          "mean": 22.1481,
           "stat": "Industry: Furniture Restoration"
         },
         {
           "min": -40.68,
           "max": 598.45,
-          "mean": 67.38,
+          "mean": 67.9866,
           "stat": "Industry: Retail"
         },
         {
           "min": -2.19,
           "max": 258.1,
-          "mean": 26.7226,
+          "mean": 26.562,
           "stat": "Industry: Book Publishing"
         },
         {
           "min": -20.17,
           "max": 387.02,
-          "mean": 15.8207,
+          "mean": 16.0981,
           "stat": "Industry: Gambling"
         },
         {
           "min": -3814.01,
           "max": 51.17,
-          "mean": -1454.4657,
+          "mean": -1464.2239,
           "stat": "Sector: Manufacturing"
         },
         {
           "min": -0.26,
-          "max": -0.02,
-          "mean": -0.1017,
+          "max": 0,
+          "mean": -0.1009,
           "stat": "Government Size"
         },
         {
           "min": -1.47,
           "max": 125.08,
-          "mean": 18.7834,
+          "mean": 18.348,
           "stat": "Welfare"
         },
         {
           "min": -2.35,
           "max": 167.63,
-          "mean": 41.1316,
+          "mean": 41.2553,
           "stat": "Public Healthcare"
         },
         {
           "min": -3.04,
           "max": 385.8,
-          "mean": 60.978,
+          "mean": 61.3828,
           "stat": "Law Enforcement"
         },
         {
           "min": -12.38,
           "max": 280.11,
-          "mean": 59.501,
+          "mean": 60.4827,
           "stat": "Business Subsidization"
+        },
+        {
+          "min": -1.06,
+          "max": 0,
+          "mean": -0.0011,
+          "stat": "Income Equality"
+        },
+        {
+          "min": -0.04,
+          "max": 0,
+          "mean": 0,
+          "stat": "Rudeness"
+        },
+        {
+          "min": -0.05,
+          "max": 0,
+          "mean": -0.0001,
+          "stat": "Compliance"
+        },
+        {
+          "min": -1.46,
+          "max": 0,
+          "mean": -0.0015,
+          "stat": "Safety"
         },
         {
           "min": -0.38,
           "max": 0.59,
-          "mean": 0.0189,
+          "mean": 0.0185,
           "stat": "Lifespan"
         },
         {
+          "min": -0.56,
+          "max": 0,
+          "mean": -0.0006,
+          "stat": "Ideological Radicality"
+        },
+        {
           "min": -907.95,
-          "max": -46.08,
-          "mean": -352.9482,
+          "max": 0.01,
+          "mean": -352.5087,
           "stat": "Defense Forces"
         },
         {
-          "min": 0,
-          "max": 11.74,
-          "mean": 2.437,
+          "min": -0.02,
+          "max": 11.78,
+          "mean": 2.3783,
           "stat": "Pacifism"
+        },
+        {
+          "min": 0,
+          "max": 1.66,
+          "mean": 0.0017,
+          "stat": "Economic Freedom"
         },
         {
           "min": -1.5,
           "max": 1.84,
-          "mean": 0.0141,
+          "mean": 0.0137,
           "stat": "Taxation"
         },
         {
-          "min": 0.36,
+          "min": 0,
           "max": 2.08,
-          "mean": 0.7204,
+          "mean": 0.7115,
           "stat": "Freedom From Taxation"
         },
         {
+          "min": 0,
+          "max": 1.32,
+          "mean": 0.0013,
+          "stat": "Corruption"
+        },
+        {
+          "min": -0.09,
+          "max": 0,
+          "mean": -0.0001,
+          "stat": "Integrity"
+        },
+        {
+          "min": -13.29,
+          "max": 0,
+          "mean": -0.0134,
+          "stat": "Authoritarianism"
+        },
+        {
           "min": -2.23,
-          "max": 0.09,
-          "mean": -0.1035,
+          "max": 0.47,
+          "mean": -0.1018,
           "stat": "Employment"
         },
         {
           "min": -1.51,
           "max": 125.36,
-          "mean": 17.748,
+          "mean": 17.6814,
           "stat": "Public Transport"
+        },
+        {
+          "min": 0,
+          "max": 0.01,
+          "mean": 0,
+          "stat": "Tourism"
         },
         {
           "min": -0.26,
           "max": 0,
-          "mean": -0.0312,
+          "mean": -0.0321,
           "stat": "Weaponization"
         },
         {
           "min": 0,
           "max": 0.94,
-          "mean": 0.3602,
+          "mean": 0.3599,
           "stat": "Recreational Drug Use"
         },
         {
@@ -653,57 +744,63 @@
           "stat": "Obesity"
         },
         {
+          "min": 0,
+          "max": 0.56,
+          "mean": 0.0006,
+          "stat": "Averageness"
+        },
+        {
           "min": -0.12,
           "max": 0.2,
-          "mean": 0.0066,
+          "mean": 0.0064,
           "stat": "Human Development Index"
         },
         {
           "min": -2394.36,
-          "max": -28.79,
-          "mean": -983.3701,
+          "max": 0.44,
+          "mean": -988.8625,
           "stat": "Average Income"
         },
         {
           "min": -1687.81,
-          "max": -3.14,
-          "mean": -548.8692,
+          "max": 0,
+          "mean": -548.2999,
           "stat": "Average Income of Poor"
         },
         {
           "min": -8681,
-          "max": -29,
-          "mean": -1898.2223,
+          "max": 1989,
+          "mean": -1923.3273,
           "stat": "Average Income of Rich"
         },
         {
           "min": -5.65,
           "max": 253.91,
-          "mean": 52.1335,
+          "mean": 52.5351,
           "stat": "Public Education"
         },
         {
           "min": -0.48,
           "max": 90.03,
-          "mean": 5.789,
+          "mean": 5.6874,
           "stat": "Foreign Aid"
         },
         {
           "min": -1962.33,
           "max": 861.88,
-          "mean": -292.872,
+          "mean": -291.64,
           "stat": "Average Disposable Income"
         },
         {
           "min": -1.43,
           "max": 0,
-          "mean": -0.283,
+          "mean": -0.2816,
           "stat": "Patriotism"
         },
         {
           "min": -0.34,
-          "max": 0,
-          "mean": -0.01,
+          "max": 0.23,
+          "mean": -0.0092,
           "stat": "Food Quality"
         }
       ],
@@ -723,7 +820,8 @@
           "name": "restrictive gun laws"
         }
       ],
-      "leadsTo": []
+      "leadsTo": [],
+      "dataPoints": "993"
     },
     {
       "text": "\"Ha, these feeble Skandilunders are terrified of us, and they're trying to placate us by offering us this petty tribute,\" laughs your Minister of Bovine Disruption of Porcelain Retail. \"We should accept the prize, but suggest that rather than a cash prize, perhaps they could cede us a little territory, maybe those halite mines in the northwest. We can deploy the army along their border to emphasise the strength of your opinion.\"",
@@ -736,21 +834,21 @@
           "stat": "Civil Rights"
         },
         {
-          "min": 0,
+          "min": -0.37,
           "max": 0.09,
-          "mean": 0.0001,
+          "mean": -0.0002,
           "stat": "Economy"
         },
         {
-          "min": 0,
+          "min": -0.02,
           "max": 0.97,
-          "mean": 0.0006,
+          "mean": 0.0005,
           "stat": "Wealth Gaps"
         },
         {
           "min": -1.74,
           "max": 1.26,
-          "mean": -0.0137,
+          "mean": -0.013,
           "stat": "Death Rate"
         },
         {
@@ -762,7 +860,7 @@
         {
           "min": -41.43,
           "max": 12.43,
-          "mean": -3.9594,
+          "mean": -4.0709,
           "stat": "Eco-Friendliness"
         },
         {
@@ -774,235 +872,235 @@
         {
           "min": -86.17,
           "max": 10.97,
-          "mean": -4.217,
+          "mean": -4.2042,
           "stat": "Industry: Automobile Manufacturing"
         },
         {
-          "min": -64.09,
+          "min": -67.53,
           "max": 275.1,
-          "mean": -4.2692,
+          "mean": -4.3494,
           "stat": "Industry: Cheese Exports"
         },
         {
           "min": -84.72,
           "max": 19.08,
-          "mean": -8.0415,
+          "mean": -8.1449,
           "stat": "Industry: Basket Weaving"
         },
         {
           "min": -146.09,
           "max": 87.64,
-          "mean": -11.3042,
+          "mean": -11.3965,
           "stat": "Industry: Information Technology"
         },
         {
           "min": -74.75,
           "max": 9.33,
-          "mean": -3.5989,
+          "mean": -3.5745,
           "stat": "Industry: Pizza Delivery"
         },
         {
           "min": -160.6,
           "max": 14.18,
-          "mean": -10.4086,
+          "mean": -10.3642,
           "stat": "Industry: Trout Fishing"
         },
         {
           "min": -223.99,
-          "max": 386.54,
-          "mean": -29.3953,
+          "max": 515.93,
+          "mean": -29.5671,
           "stat": "Industry: Arms Manufacturing"
         },
         {
           "min": -72.49,
           "max": 20.16,
-          "mean": -6.7284,
+          "mean": -6.7454,
           "stat": "Sector: Agriculture"
         },
         {
           "min": -108.82,
           "max": 17.63,
-          "mean": -4.5531,
+          "mean": -4.5837,
           "stat": "Industry: Beverage Sales"
         },
         {
           "min": -105.04,
           "max": 11.7,
-          "mean": -9.1533,
+          "mean": -9.2415,
           "stat": "Industry: Timber Woodchipping"
         },
         {
           "min": 0,
           "max": 1214.07,
-          "mean": 504.0886,
+          "mean": 506.2432,
           "stat": "Industry: Mining"
         },
         {
-          "min": -47.95,
+          "min": -135.22,
           "max": 7.25,
-          "mean": -3.4144,
+          "mean": -3.4639,
           "stat": "Industry: Insurance"
         },
         {
-          "min": -64.56,
+          "min": -87.21,
           "max": 10.5,
-          "mean": -5.9198,
+          "mean": -6.0768,
           "stat": "Industry: Furniture Restoration"
         },
         {
           "min": -131.04,
           "max": 261.38,
-          "mean": -15.1534,
+          "mean": -15.3786,
           "stat": "Industry: Retail"
         },
         {
-          "min": -66.65,
+          "min": -147.39,
           "max": 62.8,
-          "mean": -4.7775,
+          "mean": -4.8539,
           "stat": "Industry: Book Publishing"
         },
         {
           "min": -283.39,
           "max": 82.16,
-          "mean": -3.3582,
+          "mean": -3.5464,
           "stat": "Industry: Gambling"
         },
         {
           "min": -246.47,
-          "max": 378.07,
-          "mean": -41.6539,
+          "max": 513.35,
+          "mean": -41.9163,
           "stat": "Sector: Manufacturing"
         },
         {
           "min": 0,
           "max": 0.14,
-          "mean": 0.0461,
+          "mean": 0.0458,
           "stat": "Government Size"
         },
         {
           "min": -43.97,
-          "max": 10.16,
-          "mean": -3.4169,
+          "max": 11.55,
+          "mean": -3.496,
           "stat": "Welfare"
         },
         {
           "min": -85.57,
-          "max": 11.56,
-          "mean": -7.9311,
+          "max": 16.8,
+          "mean": -8.114,
           "stat": "Public Healthcare"
         },
         {
           "min": -155.95,
           "max": 47,
-          "mean": -14.2827,
+          "mean": -14.5421,
           "stat": "Law Enforcement"
         },
         {
           "min": -126.64,
           "max": 55.01,
-          "mean": -11.7917,
+          "mean": -12.1379,
           "stat": "Business Subsidization"
         },
         {
           "min": -0.02,
-          "max": 0,
-          "mean": 0,
+          "max": 0.79,
+          "mean": 0.0004,
           "stat": "Income Equality"
         },
         {
           "min": 0,
           "max": 2.67,
-          "mean": 0.6627,
+          "mean": 0.6593,
           "stat": "Rudeness"
         },
         {
-          "min": 0,
+          "min": -0.18,
           "max": 1.09,
-          "mean": 0.0008,
+          "mean": 0.0007,
           "stat": "Intelligence"
         },
         {
           "min": -3.15,
           "max": 0.03,
-          "mean": -0.002,
+          "mean": -0.0019,
           "stat": "Ignorance"
         },
         {
           "min": -1,
           "max": 0,
-          "mean": -0.0012,
+          "mean": -0.0011,
           "stat": "Weather"
         },
         {
-          "min": -0.04,
+          "min": -0.08,
           "max": 0.73,
-          "mean": 0.0005,
+          "mean": 0.0004,
           "stat": "Compliance"
         },
         {
           "min": -1.23,
           "max": 0.02,
-          "mean": -0.3433,
+          "mean": -0.3387,
           "stat": "Safety"
         },
         {
           "min": -0.74,
           "max": 0.94,
-          "mean": 0.0036,
+          "mean": 0.0035,
           "stat": "Lifespan"
         },
         {
           "min": -0.11,
-          "max": 0.08,
-          "mean": 0,
+          "max": 0.36,
+          "mean": 0.0002,
           "stat": "Ideological Radicality"
         },
         {
           "min": 0,
           "max": 403.96,
-          "mean": 134.6166,
+          "mean": 134.5732,
           "stat": "Defense Forces"
         },
         {
           "min": -1.74,
           "max": 0,
-          "mean": -0.4094,
+          "mean": -0.4033,
           "stat": "Pacifism"
         },
         {
-          "min": 0,
+          "min": -1.11,
           "max": 0.25,
-          "mean": 0.0001,
+          "mean": -0.0005,
           "stat": "Economic Freedom"
         },
         {
           "min": -0.63,
           "max": 0.51,
-          "mean": 0.0235,
+          "mean": 0.0231,
           "stat": "Taxation"
         },
         {
-          "min": -1.1,
+          "min": -1.79,
           "max": 0,
-          "mean": -0.3319,
+          "mean": -0.3314,
           "stat": "Freedom From Taxation"
         },
         {
           "min": 0,
           "max": 2.84,
-          "mean": 0.5603,
+          "mean": 0.5602,
           "stat": "Corruption"
         },
         {
           "min": -0.53,
           "max": 0,
-          "mean": -0.1572,
+          "mean": -0.155,
           "stat": "Integrity"
         },
         {
           "min": -14.16,
-          "max": 12.55,
-          "mean": -0.0027,
+          "max": 115.37,
+          "mean": 0.0623,
           "stat": "Authoritarianism"
         },
         {
@@ -1014,35 +1112,35 @@
         {
           "min": -2.44,
           "max": 0.12,
-          "mean": -0.0861,
+          "mean": -0.0848,
           "stat": "Employment"
         },
         {
-          "min": -32.99,
-          "max": 6.83,
-          "mean": -3.9515,
+          "min": -34.63,
+          "max": 11.9,
+          "mean": -4.0127,
           "stat": "Public Transport"
         },
         {
           "min": -6.05,
           "max": 0.06,
-          "mean": -0.8385,
+          "mean": -0.8362,
           "stat": "Tourism"
         },
         {
           "min": -0.08,
-          "max": 0.06,
-          "mean": 0,
+          "max": 0.09,
+          "mean": 0.0001,
           "stat": "Weaponization"
         },
         {
           "min": -0.09,
-          "max": 0,
+          "max": 0.07,
           "mean": -0.0001,
           "stat": "Recreational Drug Use"
         },
         {
-          "min": 0,
+          "min": -0.01,
           "max": 0.04,
           "mean": 0.0011,
           "stat": "Obesity"
@@ -1050,67 +1148,67 @@
         {
           "min": -3.78,
           "max": 0,
-          "mean": -1.0559,
+          "mean": -1.0522,
           "stat": "Environmental Beauty"
         },
         {
           "min": -1.69,
           "max": 4.32,
-          "mean": 0.1408,
+          "mean": 0.1417,
           "stat": "Charmlessness"
         },
         {
-          "min": -0.08,
+          "min": -0.36,
           "max": 0.11,
-          "mean": 0,
+          "mean": -0.0002,
           "stat": "Averageness"
         },
         {
           "min": -0.25,
           "max": 0.32,
-          "mean": 0.0014,
+          "mean": 0.0013,
           "stat": "Human Development Index"
         },
         {
           "min": -2.4,
-          "max": 0,
-          "mean": -0.0015,
+          "max": 0.5,
+          "mean": -0.0012,
           "stat": "Primitiveness"
         },
         {
-          "min": 0,
+          "min": -1.78,
           "max": 2.13,
-          "mean": 0.0014,
+          "mean": 0.0003,
           "stat": "Scientific Advancement"
         },
         {
           "min": -1.61,
           "max": 3.28,
-          "mean": 0.001,
+          "mean": 0.0009,
           "stat": "Inclusiveness"
         },
         {
-          "min": 0,
+          "min": -534.27,
           "max": 1443.44,
-          "mean": 417.0271,
+          "mean": 416.2081,
           "stat": "Average Income"
         },
         {
           "min": 0,
           "max": 660.91,
-          "mean": 205.8896,
+          "mean": 206.4611,
           "stat": "Average Income of Poor"
         },
         {
-          "min": 0,
+          "min": -1617,
           "max": 10436,
-          "mean": 1003.8687,
+          "mean": 1000.0191,
           "stat": "Average Income of Rich"
         },
         {
           "min": -101.4,
           "max": 142.11,
-          "mean": -9.0857,
+          "mean": -9.1926,
           "stat": "Public Education"
         },
         {
@@ -1122,25 +1220,25 @@
         {
           "min": -21.97,
           "max": 3.1,
-          "mean": -1.1375,
+          "mean": -1.1412,
           "stat": "Foreign Aid"
         },
         {
           "min": -678.74,
           "max": 979.36,
-          "mean": 123.1231,
+          "mean": 121.3892,
           "stat": "Average Disposable Income"
         },
         {
           "min": 0,
           "max": 0.75,
-          "mean": 0.1089,
+          "mean": 0.1086,
           "stat": "Patriotism"
         },
         {
-          "min": -0.15,
+          "min": -0.74,
           "max": 0.54,
-          "mean": -0.0106,
+          "mean": -0.011,
           "stat": "Food Quality"
         }
       ],
@@ -1167,7 +1265,8 @@
           "name": "restrictive gun laws"
         }
       ],
-      "leadsTo": []
+      "leadsTo": [],
+      "dataPoints": "1778"
     }
   ]
 }
