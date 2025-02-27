@@ -1,40 +1,15 @@
 // ==UserScript==
 // @name         Issue Stat Getter
-// @namespace    Kra
-// @version      2.3
+// @version      2.4
 // @description  Get issues results shown to you.
 // @author       Kractero
-// @match        https://www.nationstates.net/page=show_dilemma/dilemma=*
+// @match        https://*.nationstates.net/page=show_dilemma/dilemma=*
 // @downloadURL  https://raw.githubusercontent.com/Kractero/issue-stats/main/issueStatGetter.user.js
 // @updateURL    https://raw.githubusercontent.com/Kractero/issue-stats/main/issueStatGetter.user.js
 // @grant        GM.getValue
 // @grant        GM.setValue
 // @grant        GM.deleteValue
 // ==/UserScript==
-
-async function migrateData() {
-  const badges = localStorage.getItem('badges')
-  if (badges) {
-    await GM.setValue('badges', JSON.parse(badges))
-  }
-
-  const uncheckedValues = localStorage.getItem('uncheckedValues')
-  if (uncheckedValues) {
-    await GM.setValue('uncheckedValues', JSON.parse(uncheckedValues))
-  }
-
-  const showNonStats = localStorage.getItem('showNonStats')
-  if (showNonStats) {
-    await GM.setValue('showNonStats', showNonStats === 'true')
-  }
-
-  localStorage.setItem('migrationDone', 'true')
-}
-
-const migrationDone = localStorage.getItem('migrationDone')
-if (!migrationDone) {
-  migrateData()
-}
 
 function levenshteinDistance(str1, str2) {
   const m = str1.length
@@ -361,7 +336,6 @@ function levenshteinDistance(str1, str2) {
     })
 
     issue.options[bestMatchNum].choiceEffects.forEach(item => {
-      // const shortForm = census.find(censusEntry => censusEntry[1] === item.stat)
       const imageUrl = badges[nation][item.stat]
       item.image = imageUrl
     })
