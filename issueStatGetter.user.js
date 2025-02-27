@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Issue Stat Getter
-// @version      2.4
+// @version      2.5
 // @description  Get issues results shown to you.
 // @author       Kractero
 // @match        https://*.nationstates.net/page=show_dilemma/dilemma=*
@@ -175,20 +175,25 @@ function levenshteinDistance(str1, str2) {
     `
   document.getElementsByTagName('head')[0].appendChild(stylesheet)
 
-  const id = window.location.href.replace('https://www.nationstates.net/page=show_dilemma/dilemma=', '')
+  // const eggs = ['77', '78', '80', '215', '223', '256', '266', '375', '408', '430', '471', '622', '1122', '1549']
+
+  const match = window.location.href.match(/dilemma=(\d+)/);
+  const id = match ? match[1] : null;
   const nation = document.querySelector('.bannernation2')
     ? document.querySelector('.bannernation2').innerText
     : document.querySelector('#loggedin').getAttribute('data-nname')
   const choices = document.querySelectorAll('.diloptions li p:first-child')
   const filterSpot = document.querySelector('.dilemma')
   const shownValues = await GM.getValue('uncheckedValues', {})
-  const showNonStats = await GM.getValue('showNonStats', true)
+  const showPolicies = await GM.getValue('showPolicies', true)
+  const showNotabilities = await GM.getValue('showNotabilities', true)
   const checkboxes = document.createElement('div')
   const buttonLabels = [
     'Filter Categories',
     'Toggle All',
     'Regenerate Badges',
-    'Hide Non-Stats',
+    'Hide Policies',
+    'Hide Notabilities',
     'Toggle One Percent',
     'Toggle Five Percent',
     'Toggle Ten Percent',
@@ -199,7 +204,8 @@ function levenshteinDistance(str1, str2) {
     toggleButton,
     toggleCheckStatus,
     gatherBadges,
-    hideNotStats,
+    hidePolicies,
+    hideNotabilities,
     toggleOnePercent,
     toggleFivePercent,
     toggleTenPercent,
@@ -214,7 +220,8 @@ function levenshteinDistance(str1, str2) {
     checkboxes,
     toggleCheckStatus,
     gatherBadges,
-    hideNotStats,
+    hidePolicies,
+    hideNotabilities,
     toggleOnePercent,
     toggleFivePercent,
     toggleTenPercent,
@@ -303,13 +310,21 @@ function levenshteinDistance(str1, str2) {
     toggleButton,
     toggleCheckStatus,
     gatherBadges,
-    hideNotStats,
+    hidePolicies,
+    hideNotabilities,
     checkboxes,
     toggleOnePercent,
     toggleFivePercent,
     toggleTenPercent,
     toggleUnranked
   )
+
+  // if (eggs.includes(id)) {
+  //   const header = document.createElement('h1')
+  //   header.textContent = 'EASTER EGG'
+  //   filterSpot.prepend(header)
+  // }
+
 
   let badges = await GM.getValue('badges', {})
   if (!badges[nation] || Object.keys(badges[nation]).length === 0) {
@@ -379,10 +394,7 @@ function levenshteinDistance(str1, str2) {
   for (let i = 0; i < approves.length; i++) {
     const fatherDiv = document.createElement('div')
     const policyDiv = document.createElement('div')
-    policyDiv.classList.add('notstats')
-    if (showNonStats === false) {
-      policyDiv.classList.add('hidden')
-    }
+
     fatherDiv.classList.add('effect-div')
     if (!bestMatchArray[i]) {
       const probableBug = document.createElement('p')
@@ -394,6 +406,16 @@ function levenshteinDistance(str1, str2) {
     bestMatchArray[i].policiesAndNotabilities.map(policies => {
       const policy = document.createElement('p')
       policy.textContent = policies.full
+
+      const type = policies.type
+      policyDiv.classList.add(type)
+      if (type && showNotabilities === false) {
+        policyDiv.classList.add('hidden')
+      }
+
+      if (type && showPolicies === false) {
+        policyDiv.classList.add('hidden')
+      }
       policyDiv.append(policy)
     })
 
@@ -437,8 +459,13 @@ function levenshteinDistance(str1, str2) {
     approves[i].appendChild(fatherDiv)
   }
 
-  hideNotStats.addEventListener('click', async () => {
-    document.querySelector('.notstats').classList.toggle('hidden')
-    await GM.setValue('showNonStats', !showNonStats)
+  hidePolicies.addEventListener('click', async () => {
+    if (document.querySelector('.policy')) document.querySelector('.policy').classList.toggle('hidden')
+    await GM.setValue('showPolicies', !showPolicies)
+  })
+
+  hideNotabilities.addEventListener('click', async () => {
+    if(document.querySelector('.notability')) document.querySelector('.notability').classList.toggle('hidden')
+    await GM.setValue('showNotabilities', !showNotabilities)
   })
 })()
