@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Issue Stat Getter
-// @version      2.6
+// @version      2.7
 // @description  Get issues results shown to you.
 // @author       Kractero
 // @match        https://*.nationstates.net/page=show_dilemma/dilemma=*
@@ -177,8 +177,6 @@ function levenshteinDistance(str1, str2) {
 
   // const eggs = ['77', '78', '80', '215', '223', '256', '266', '375', '408', '430', '471', '622', '1122', '1549']
 
-  const match = window.location.href.match(/dilemma=(\d+)/);
-  const id = match ? match[1] : null;
   const nation = document.querySelector('.bannernation2')
     ? document.querySelector('.bannernation2').innerText
     : document.querySelector('#loggedin').getAttribute('data-nname')
@@ -325,7 +323,6 @@ function levenshteinDistance(str1, str2) {
   //   filterSpot.prepend(header)
   // }
 
-
   let badges = await GM.getValue('badges', {})
   if (!badges[nation] || Object.keys(badges[nation]).length === 0) {
     badges[nation] = await getBadgeMap(nation)
@@ -410,11 +407,11 @@ function levenshteinDistance(str1, str2) {
       const type = policies.type
       policy.classList.add(type)
 
-      if (type && showNotabilities === false) {
+      if (type === 'policy' && showPolicies === false) {
         policy.classList.add('hidden')
       }
 
-      if (type && showPolicies === false) {
+      if (type === 'notability' && showNotabilities === false) {
         policy.classList.add('hidden')
       }
       policyDiv.append(policy)
