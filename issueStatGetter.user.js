@@ -408,13 +408,14 @@ function levenshteinDistance(str1, str2) {
       policy.textContent = policies.full
 
       const type = policies.type
-      policyDiv.classList.add(type)
+      policy.classList.add(type)
+
       if (type && showNotabilities === false) {
-        policyDiv.classList.add('hidden')
+        policy.classList.add('hidden')
       }
 
       if (type && showPolicies === false) {
-        policyDiv.classList.add('hidden')
+        policy.classList.add('hidden')
       }
       policyDiv.append(policy)
     })
@@ -460,12 +461,16 @@ function levenshteinDistance(str1, str2) {
   }
 
   hidePolicies.addEventListener('click', async () => {
-    if (document.querySelector('.policy')) document.querySelector('.policy').classList.toggle('hidden')
+    Array.from(document.querySelectorAll('.policy')).forEach(policy => {
+      policy.classList.toggle('hidden')
+    })
     await GM.setValue('showPolicies', !showPolicies)
   })
 
   hideNotabilities.addEventListener('click', async () => {
-    if(document.querySelector('.notability')) document.querySelector('.notability').classList.toggle('hidden')
+    Array.from(document.querySelectorAll('.notability')).forEach(policy => {
+      policy.classList.toggle('hidden')
+    })
     await GM.setValue('showNotabilities', !showNotabilities)
   })
 })()
