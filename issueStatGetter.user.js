@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Issue Stat Getter
-// @version      2.5
+// @version      2.6
 // @description  Get issues results shown to you.
 // @author       Kractero
 // @match        https://*.nationstates.net/page=show_dilemma/dilemma=*
