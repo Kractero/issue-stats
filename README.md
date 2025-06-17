@@ -16,8 +16,6 @@ node generateJson.js
 
 ## Known Issues
 
-Skipped 1665. 1665 has too much going on for me to decide which choice goes to which effect.
-
 Please file an issue if you run into any bugs, because there will be bugs.
 
 The old version consisted of a lot of issues and required manual fixing due to some inconsistencies in ValentineZ's repo, which I forked and made corrections to. This fixed a vast majority and noted in `/val_z_error`, but can also be found in `old/`'s problem jsons.
