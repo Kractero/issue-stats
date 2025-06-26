@@ -1,5 +1,23 @@
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync } from 'fs'
 import { parse } from 'node-html-parser'
+import Database from 'better-sqlite3'
+
+const db = new Database('./issues.db')
+
+db.prepare(
+  `
+  CREATE TABLE IF NOT EXISTS issues (
+    issue_number INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    choice_effects TEXT NOT NULL
+  )
+`
+).run()
+
+const upsertStmt = db.prepare(`
+  INSERT INTO issues (issue_number, title, choice_effects) VALUES (?, ?, ?)
+  ON CONFLICT(issue_number) DO UPDATE SET choice_effects=excluded.choice_effects
+`)
 
 const EFFECTS_URL = 'http://www.mwq.dds.nl/ns/results/'
 
@@ -10,7 +28,8 @@ const filenames = readFileSync('repo_files.txt', 'utf-8')
 export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
-let globalCount = 0
+
+const allIssues = []
 for (let filename of filenames) {
   const file = readFileSync(`./issue-megalist/${filename}`, 'utf-8')
   const textWithoutCarriageReturn = file
@@ -34,13 +53,9 @@ for (let filename of filenames) {
     const debateIndex = splitIssue.indexOf('The Debate')
     const debatePortion = splitIssue.slice(debateIndex + 1).filter(str => str.trim() !== '')
 
-    const issueObject = {
-      title: title,
-      number: issueNum,
-      options: [],
-    }
+    const options = []
     debatePortion.forEach(option => {
-      issueObject.options.push({
+      options.push({
         text: option.slice(option.indexOf('. ') + 2),
       })
     })
@@ -108,14 +123,14 @@ for (let filename of filenames) {
           }
         })
 
-        if (issueObject.options[index - 1]) {
-          issueObject.options[index - 1].result = value
-          issueObject.options[index - 1].choiceEffects = choiceEffects
-          issueObject.options[index - 1].policiesAndNotabilities = policiesAndNotabilities
-          issueObject.options[index - 1].leadsTo = leadsTo
-          issueObject.options[index - 1].dataPoints = points[i]
+        if (options[index - 1]) {
+          options[index - 1].result = value
+          options[index - 1].choiceEffects = choiceEffects
+          options[index - 1].policiesAndNotabilities = policiesAndNotabilities
+          options[index - 1].leadsTo = leadsTo
+          options[index - 1].dataPoints = points[i]
         } else {
-          issueObject.options.push({
+          options.push({
             result: value,
             choiceEffects: choiceEffects,
             policiesAndNotabilities: policiesAndNotabilities,
@@ -126,8 +141,18 @@ for (let filename of filenames) {
       })
     })
 
-    writeFileSync(`issues/${issueObject.number}.json`, JSON.stringify(issueObject, null, 2))
+    allIssues.push({ issueNum, title, options })
+
     await sleep(1400)
-    globalCount++
+    console.log(`Done fetching ${title} - ${issueNum} from mwq`)
   }
 }
+
+const insertMany = db.transaction(allIssues => {
+  for (const issue of allIssues) {
+    const stringified = JSON.stringify(issue.options, null, 2)
+    upsertStmt.run(issue.issueNum, issue.title, stringified)
+  }
+})
+
+insertMany(allIssues)
