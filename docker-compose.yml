@@ -1,0 +1,25 @@
+services:
+  issue-stats:
+    build:
+      context: .
+    container_name: issue-stats
+    volumes:
+      - ./app.log:/app/app.log
+      - ./issues.db:/app/issues.db
+    restart: always
+    networks:
+      - caddy
+    depends_on:
+      - redis
+  redis:
+    image: redis:8-alpine
+    container_name: redis
+    restart: always
+    volumes:
+      - redis-data:/data
+networks:
+  caddy:
+    external: true
+
+volumes:
+  redis-data:
