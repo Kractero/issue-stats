@@ -24,7 +24,7 @@ def get_issue(issue_id):
     cached = cache.get(cache_key)
     if cached:
         with open("app.log", "a") as log_file:
-            log_file.write(f'Read {issue_id} from cache')
+            log_file.write(f'Read {issue_id} from cache\n')
         return jsonify(json.loads(cached))
 
     conn = sqlite3.connect("issues.db")
@@ -48,7 +48,7 @@ def get_issue(issue_id):
 
     cache.setex(cache_key, 3600, json.dumps(res))
     with open("app.log", "a") as log_file:
-        log_file.write(f'Read {issue_id} from db')
+        log_file.write(f'Read {issue_id} from db\n')
 
     return jsonify(res)
 

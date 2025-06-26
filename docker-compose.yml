@@ -17,6 +17,9 @@ services:
     restart: always
     volumes:
       - redis-data:/data
+    networks:
+      - caddy
+
 networks:
   caddy:
     external: true
