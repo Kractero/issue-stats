@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Issue Stat Getter
-// @version      2.7
+// @version      3.0
 // @description  Get issues results shown to you.
 // @author       Kractero
 // @match        https://*.nationstates.net/page=show_dilemma/dilemma=*
@@ -332,7 +332,7 @@ function levenshteinDistance(str1, str2) {
 
   const num = parseInt(document.querySelector('.dpapervol').textContent.split(' ').at(-1).replace(',', ''))
 
-  const getSubList = await fetch(`https://raw.githubusercontent.com/Kractero/issue-stats/master/issues/${num}.json`)
+  const getSubList = await fetch(`https://issues.kractero.com/issue/${num}`)
   const issue = await getSubList.json()
   const bestMatchArray = choicesObject.map(option => {
     option = option.replace(/“|”/g, '"')
