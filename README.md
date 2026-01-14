@@ -1,38 +1,15 @@
 # Issue Stat Grabber
 
-My TamperMonkey script that gets issue stats and puts them on your issues page, built from joining ValentineZ's issue github repository data with the MWQ issue effects database.
+A Tampermonkey userscript that connects an issue choice to their effects by combining ValentineZ’s public issue repository with Trotterdam's MWQ issue effects database.
 
-## Usage
+## Status Notice
 
-[Add the script](https://github.com/Kractero/issue-stats/raw/main/issueStatGetter.user.js) to Tampermonkey.
+This repository is **not affiliated with or endorsed by the NationStates issue editing team or any individual member**.
 
-If you want to build your own issues json, make sure you have Node.js on your system.
+The project is maintained for **personal and private usage**, using publicly available data from ValentineZ and Trotterdam.
 
-```
-git clone https://github.com/Kractero/issue-stats.git
-npm install
-node generateJson.js
-```
+The repository is publicly accessible but maintained for personal use only.
 
-## Known Issues
+## Reporting Issues
 
-Please file an issue if you run into any bugs, because there will be bugs.
-
-The old version consisted of a lot of issues and required manual fixing due to some inconsistencies in ValentineZ's repo, which I forked and made corrections to. This fixed a vast majority and noted in `/val_z_error`, but can also be found in `old/`'s problem jsons.
-
-### Post-Parser Errors
-
-The current errors are `errors.txt`.
-
----
-
-![Issue Result Sample](/public/Issue%20Result.png)
-
-## Features
-
-1. See MWQ results directly on your issue pages, no more hopping between tabs or windows.
-2. Select the categories relevant to the nation you are in, and store each nation's configuration in local storage.
-3. Quickly toggle all, one percent, five percent, ten percent, and unranked badges with one button.
-4. See your exact badge icons alongside the results and regenerate them if they are out of date with one click.
-
-![Filter](/public/Filter.png)
+Feature requests are not accepted. Issues from the upstream data sources should be directed to their respective owners.
