@@ -1,4 +1,3 @@
-import { readFileSync } from 'fs'
 import { parse } from 'node-html-parser'
 import Database from 'better-sqlite3'
 
@@ -19,11 +18,15 @@ const upsertStmt = db.prepare(`
   ON CONFLICT(issue_number) DO UPDATE SET choice_effects=excluded.choice_effects
 `)
 
+const BASE_REPO_URL =
+  'https://raw.githubusercontent.com/Clarissa-Valentine-Z/NationStates-Issue-Megathread/master/002%20-%20Issue%20Megalist%20(MAIN)/'
 const EFFECTS_URL = 'http://www.mwq.dds.nl/ns/results/'
 
-const filenames = readFileSync('repo_files.txt', 'utf-8')
-  .split('\n')
-  .map(name => name.replace('\r', ''))
+const url =
+  'https://api.github.com/repos/Clarissa-Valentine-Z/NationStates-Issue-Megathread/contents/002%20-%20Issue%20Megalist%20(MAIN)'
+const res = await fetch(url)
+let filenames = await res.json()
+filenames = filenames.map(file => file.name).slice(-7)
 
 export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
@@ -31,8 +34,9 @@ export function sleep(ms) {
 
 const allIssues = []
 for (let filename of filenames) {
-  const file = readFileSync(`./issue-megalist/${filename}`, 'utf-8')
-  const textWithoutCarriageReturn = file
+  const res = await fetch(`${BASE_REPO_URL}${filename}`)
+  const text = await res.text()
+  let textWithoutCarriageReturn = text
     .split('\r')
     .join('')
     .trim()
@@ -42,16 +46,24 @@ for (let filename of filenames) {
       if (match === '“') return ''
       return match
     })
-  const issues = textWithoutCarriageReturn.split(/\n-{4,}\s*\n/)
+
+  const hr = '\n[hr][/hr]'
+  const lastIndex = text.lastIndexOf(hr)
+  if (lastIndex === -1)
+    textWithoutCarriageReturn =
+      textWithoutCarriageReturn.slice(0, lastIndex) + textWithoutCarriageReturn.slice(lastIndex + hr.length)
+  const issues = textWithoutCarriageReturn.split(/\[hr\]\[\/hr\]\s*/)
   for (let i = 0; i < issues.length; i++) {
     const splitIssue = issues[i].split('\n')
     let [title, authorEditor] = splitIssue[0]
       .slice(splitIssue[0].indexOf(': ') + 2, splitIssue[0].indexOf('[/b]'))
       .split(' [')
+    if (title.includes('TBD')) break
     const interim = splitIssue[0].slice(0, splitIssue[0].lastIndexOf('[/anchor'))
     const issueNum = interim.slice(interim.lastIndexOf(']') + 1).replace('#', '')
     const debateIndex = splitIssue.indexOf('The Debate')
     const debatePortion = splitIssue.slice(debateIndex + 1).filter(str => str.trim() !== '')
+    if (!title || !issueNum) break
 
     const options = []
     debatePortion.forEach(option => {
